@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -22,12 +23,12 @@ import LaptopIcon from "@mui/icons-material/Laptop";
 
 const drawerWidth = 240;
 const navItems = [
-  { title: "Inicio", icon: <HomeIcon /> },
-  { title: "Sobre mi", icon: <PersonIcon /> },
-  { title: "Experiencia", icon: <HomeRepairServiceIcon /> },
-  { title: "Proyectos", icon: <LaptopIcon /> },
-  { title: "Tecnologias", icon: <SchoolIcon /> },
-  { title: "Contacto", icon: <EmailIcon /> },
+  { title: "Inicio", icon: <HomeIcon />, path: "*" },
+  { title: "Sobre mi", icon: <PersonIcon />, path: "*" },
+  { title: "Experiencia", icon: <HomeRepairServiceIcon />, path: "*" },
+  { title: "Proyectos", icon: <LaptopIcon />, path: "*" },
+  { title: "Tecnologias", icon: <SchoolIcon />, path: "*" },
+  { title: "Contacto", icon: <EmailIcon />, path: "*" },
 ];
 
 function Navbar(props) {
@@ -89,7 +90,19 @@ function Navbar(props) {
 
           <Box sx={{ display: { xs: "none", md: "block" } }}>
             {navItems.map((item) => (
-              <Button startIcon={item.icon} key={item.title} sx={{ color: "#fff" }}>
+              <Button
+                component="a"
+                href={item.path}
+                startIcon={item.icon}
+                key={item.title}
+                sx={{
+                  color: "#fff",
+                  "&:hover": {
+                    borderBottom: 1,
+                    borderColor: "primary.main",
+                  },
+                }}
+              >
                 {item.title}
               </Button>
             ))}
