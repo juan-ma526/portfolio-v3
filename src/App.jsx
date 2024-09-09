@@ -1,9 +1,10 @@
-import { Box, Container } from "@mui/material";
+import { Container } from "@mui/material";
 import "./App.css";
 import Navbar from "./components/Navbar";
 
 import { AboutMe } from "./components/AboutMe";
 import { HomeTitle } from "./components/HomeTitle";
+import StepperJobs from "./components/StepperJobs";
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
         <Navbar />
         <HomeTitle />
         <AboutMe />
-        <Box height="300px">ss</Box>
+        <StepperJobs />
+        {/*  <Box height="300px">ss</Box> */}
       </Container>
     </>
   );

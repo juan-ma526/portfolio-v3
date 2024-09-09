@@ -60,6 +60,8 @@ export const HomeTitle = () => {
         </Typography>
         <Box display={"flex"} justifyContent={"center"} alignItems={"center"} gap={2}>
           <IconButton
+            href="https://github.com/juan-ma526"
+            target="_blanck"
             sx={{
               width: "52px",
               height: "52px",
@@ -76,6 +78,8 @@ export const HomeTitle = () => {
             <GitHubIcon sx={{ width: "32px", height: "32px" }} />
           </IconButton>
           <IconButton
+            href="https://www.linkedin.com/in/juan-ma526/"
+            target="_blanck"
             sx={{
               boxShadow: "0 4px 6px #000000b3",
               width: "52px",

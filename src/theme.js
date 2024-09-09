@@ -7,7 +7,7 @@ const theme = createTheme({
       main: "#FF007F",
     },
     secondary: {
-      main: "#00FFFF",
+      main: "#00FFFF", //Celeste
     },
     error: {
       main: "#8A2BE2",
