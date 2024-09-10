@@ -6,6 +6,7 @@ import { AboutMe } from "./components/AboutMe";
 import { HomeTitle } from "./components/HomeTitle";
 import StepperJobs from "./components/StepperJobs";
 import { Skills } from "./components/Skills";
+import { Projects } from "./components/Projects";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <AboutMe />
         <StepperJobs />
         <Skills />
+        <Projects />
         <Box height="300px">ss</Box>
       </Container>
     </>
