@@ -14,8 +14,19 @@ import redux from "../assets/Icons/redux.png";
 import sequelize from "../assets/Icons/sequelize.png";
 import tailwind from "../assets/Icons/tailwind.png";
 import typescript from "../assets/Icons/typescript.png";
+import jest from "../assets/Icons/jest.png";
+import html from "../assets/Icons/html5.png";
+import authJS from "../assets/Icons/authjs.png";
 
 export const ICONS = [
+  {
+    title: "Html",
+    path: html,
+  },
+  {
+    title: "Javascript",
+    path: javascript,
+  },
   {
     title: "React",
     path: react,
@@ -25,6 +36,27 @@ export const ICONS = [
     path: css,
   },
   {
+    title: "Tailwind",
+    path: tailwind,
+  },
+  {
+    title: "Material UI",
+    path: materialui,
+  },
+  {
+    title: "Next",
+    path: next,
+  },
+  {
+    title: "AuthJS",
+    path: authJS,
+  },
+  {
+    title: "Typescript",
+    path: typescript,
+  },
+
+  {
     title: "Git",
     path: git,
   },
@@ -32,14 +64,7 @@ export const ICONS = [
     title: "Github",
     path: github,
   },
-  {
-    title: "Typescript",
-    path: typescript,
-  },
-  {
-    title: "Tailwind",
-    path: tailwind,
-  },
+
   {
     title: "Sequelize",
     path: sequelize,
@@ -60,24 +85,19 @@ export const ICONS = [
     title: "NodeJS",
     path: nodeJS,
   },
-  {
-    title: "Next",
-    path: next,
-  },
+
   {
     title: "MongoDB",
     path: mongoDB,
   },
-  {
-    title: "Material UI",
-    path: materialui,
-  },
+
   {
     title: "Jwt",
     path: jwt,
   },
+
   {
-    title: "Javascript",
-    path: javascript,
+    title: "Jest",
+    path: jest,
   },
 ];
