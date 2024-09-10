@@ -1,10 +1,11 @@
-import { Container } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import "./App.css";
 import Navbar from "./components/Navbar";
 
 import { AboutMe } from "./components/AboutMe";
 import { HomeTitle } from "./components/HomeTitle";
 import StepperJobs from "./components/StepperJobs";
+import { Skills } from "./components/Skills";
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
         <HomeTitle />
         <AboutMe />
         <StepperJobs />
-        {/*  <Box height="300px">ss</Box> */}
+        <Skills />
+        <Box height="300px">ss</Box>
       </Container>
     </>
   );
