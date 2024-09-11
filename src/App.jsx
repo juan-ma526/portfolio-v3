@@ -1,4 +1,4 @@
-import { Box, Container } from "@mui/material";
+import { Container } from "@mui/material";
 import "./App.css";
 import Navbar from "./components/Navbar";
 
@@ -7,6 +7,7 @@ import { HomeTitle } from "./components/HomeTitle";
 import StepperJobs from "./components/StepperJobs";
 import { Skills } from "./components/Skills";
 import { Projects } from "./components/Projects";
+import { Footer } from "./components/Footer";
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
         <StepperJobs />
         <Skills />
         <Projects />
-        <Box height="300px">ss</Box>
+        <Footer />
       </Container>
     </>
   );
