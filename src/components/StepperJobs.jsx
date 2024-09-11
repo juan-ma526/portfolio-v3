@@ -44,7 +44,7 @@ const steps = [
 export default function StepperJobs() {
   return (
     <>
-      <Typography variant="h2" sx={{ ml: { xs: "20px", md: "400px" }, fontWeight: 700 }}>
+      <Typography id="trabajos" variant="h2" sx={{ ml: { xs: "20px", md: "400px" }, fontWeight: 700 }}>
         Experiencia
       </Typography>
       <Box

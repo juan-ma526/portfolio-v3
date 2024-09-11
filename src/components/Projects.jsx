@@ -27,7 +27,7 @@ export const Projects = () => {
   };
   return (
     <>
-      <Typography variant="h2" sx={{ mt: "80px", ml: { xs: "20px", md: "70px" } }}>
+      <Typography id="proyectos" variant="h2" sx={{ mt: "80px", ml: { xs: "20px", md: "70px" } }}>
         Proyectos
       </Typography>
       <Box

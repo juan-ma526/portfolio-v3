@@ -6,6 +6,7 @@ import homeImg from "../assets/Home2.jpg";
 export const HomeTitle = () => {
   return (
     <Box
+      id="home-title"
       sx={{
         backgroundImage: `url(${homeImg})`,
         backgroundRepeat: "no-repeat",

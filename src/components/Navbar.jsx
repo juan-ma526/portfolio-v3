@@ -23,12 +23,12 @@ import LaptopIcon from "@mui/icons-material/Laptop";
 
 const drawerWidth = 240;
 const navItems = [
-  { title: "Inicio", icon: <HomeIcon />, path: "*" },
-  { title: "Sobre mi", icon: <PersonIcon />, path: "*" },
-  { title: "Experiencia", icon: <HomeRepairServiceIcon />, path: "*" },
-  { title: "Proyectos", icon: <LaptopIcon />, path: "*" },
-  { title: "Tecnologias", icon: <SchoolIcon />, path: "*" },
-  { title: "Contacto", icon: <EmailIcon />, path: "*" },
+  { title: "Inicio", icon: <HomeIcon />, path: "#" },
+  { title: "Sobre mi", icon: <PersonIcon />, path: "#about-me" },
+  { title: "Experiencia", icon: <HomeRepairServiceIcon />, path: "#trabajos" },
+  { title: "Proyectos", icon: <LaptopIcon />, path: "#proyectos" },
+  { title: "Tecnologias", icon: <SchoolIcon />, path: "#skills" },
+  { title: "Contacto", icon: <EmailIcon />, path: "#footer" },
 ];
 
 function Navbar(props) {
@@ -42,13 +42,13 @@ function Navbar(props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
+        Martin Perez
       </Typography>
       <Divider />
       <List>
         {navItems.map((item, index) => (
           <ListItem key={index} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
+            <ListItemButton href={item.path} component="a" sx={{ textAlign: "center" }}>
               <ListItemText primary={item.title} />
             </ListItemButton>
           </ListItem>

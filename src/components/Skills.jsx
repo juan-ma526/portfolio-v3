@@ -4,7 +4,7 @@ import { ICONS } from "../data/skillsData";
 export const Skills = () => {
   return (
     <>
-      <Typography variant="h2" sx={{ mt: "80px", ml: { xs: "20px", md: "70px" } }}>
+      <Typography id="skills" variant="h2" sx={{ mt: "80px", ml: { xs: "20px", md: "70px" } }}>
         Tecnologías
       </Typography>
       <Box

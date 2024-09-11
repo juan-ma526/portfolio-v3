@@ -17,6 +17,7 @@ const gradientAnimation = keyframes`
 export const AboutMe = () => {
   return (
     <Grid2
+      id="about-me"
       minHeight={589}
       alignItems="center"
       container
@@ -24,7 +25,7 @@ export const AboutMe = () => {
       sx={{
         borderRadius: "22px",
         background: "linear-gradient(135deg, #00FFFF, #FF007F, #8A2BE2, #333333)",
-        backgroundSize: "400% 400%", // Esto permite el efecto de movimiento
+        backgroundSize: "400% 400%",
         animation: `${gradientAnimation} 15s ease infinite`,
         padding: "20px",
         margin: "22px 22px 100px 22px",
