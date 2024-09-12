@@ -18,7 +18,7 @@ export const projects = [
     id: 1,
     color: "from-red-300 to-blue-300",
     title: "Turnos Web",
-    desc: "Aplicación web que permite la reserva de turnos para empresas con sucursales físicas, posibilitando la administración de la cantidad de clientes en la locación. Cada sucursal podrá diferenciar la cantidad de clientes en simultáneo que podrá recibir y los rangos horarios, desde el usuario administrador/operador. Cada turno será de 15 minutos, y se pueden cancelar hasta con 2 horas de antelación.",
+    desc: "Aplicación web que permite la reserva de turnos para empresas con sucursales físicas, posibilitando la administración de la cantidad de clientes en la locación. Cada sucursal podrá diferenciar la cantidad de clientes en simultáneo que podrá recibir y los rangos horarios, desde el usuario administrador/operador.",
     img: project1,
     logo: webTurnApp,
     links: [
@@ -55,7 +55,7 @@ export const projects = [
     id: 4,
     color: "from-purple-300 to-red-300",
     title: "Ecosistema App",
-    desc: "Aplicación sencilla para implementar el uso de mercadoPago en una compra.",
+    desc: "Proyecto de una app de quinto impacto para la creación de proveedores de servicios y publicaciones de noticias relacionadas con el impacto en el medio ambiente. Implementación de OAuth de Google, un panel de administración para la aprobación o rechazo de proveedores, para ver cantidad de vistas de publicaciones.",
     img: project4,
     logo: ecoSistema,
     links: [
@@ -68,7 +68,7 @@ export const projects = [
     id: 5,
     color: "from-purple-300 to-red-300",
     title: "Sorteo Devtalles",
-    desc: "Aplicación web para el concurso realizado para la página https://cursos.devtalles.com/. Dicha app fue realizada en una semana con la posibilidad de crear sorteos, modificarlos y eliminarlos. La participación es realizada con discord api, se necesita estar en el servidor de devtalles para poder participar, manejando las rutas con esas condiciones. También se tiene la posibilidad de elegir un ganador y ver los participantes en cada sorteo, con la posibilidad de eliminar alguno de ellos.",
+    desc: "App web para el concurso realizado para la página https://cursos.devtalles.com/. Dicha app fue realizada en una semana con la posibilidad de crear sorteos, modificarlos y eliminarlos. Se necesita discord api, y estar en el servidor de devtalles para poder participar. En el panel admin se puede elegir el ganador aleatoriamente y ver los participantes en cada sorteo.",
     img: project5,
     logo: devTalles,
     links: [

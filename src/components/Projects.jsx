@@ -2,6 +2,7 @@ import { Box, Button, Grid2, Icon, Modal, Typography } from "@mui/material";
 import { projects } from "../data/projectData";
 import { useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
+import { Carrousel } from "./Carrousel";
 
 export const Projects = () => {
   const [open, setOpen] = useState(false);
@@ -11,6 +12,7 @@ export const Projects = () => {
     setOpen(true);
     setSelectedProject(project);
   };
+
   const handleClose = () => {
     setOpen(false);
   };
@@ -55,7 +57,7 @@ export const Projects = () => {
             sx={{
               backgroundColor: "white",
               cursor: "pointer",
-              height: { xs: "130px", md: "325px" },
+              height: { xs: "130px", sm: "280px", md: "325px" },
               justifyContent: "center",
               alignContent: "center",
               borderRadius: "20px",
@@ -83,7 +85,7 @@ export const Projects = () => {
           <Box
             sx={{
               ...style,
-              width: { xs: "350px", sm: "auto" },
+              width: { xs: "350px", sm: "580px", md: "auto" },
               padding: "16px 10px",
               background: "linear-gradient(135deg, black, #333333)",
               display: "flex",
@@ -138,8 +140,18 @@ export const Projects = () => {
                 </Button>
               ))}
             </Box>
-
-            <Box sx={{ width: "220px", height: "200px", textAlign: "center", bgcolor: "red", mb: "32px" }}></Box>
+            {/* Box Img */}
+            <Box
+              sx={{
+                width: { xs: "300px", sm: "450px", md: "500px" },
+                height: { xs: "200px", sm: "250px", md: "300px" },
+                textAlign: "center",
+                bgcolor: "red",
+                mb: "32px",
+              }}
+            >
+              <Carrousel />
+            </Box>
             <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", gap: 1, mb: "22px" }}>
               {selectedProject?.links.map((link, index) => (
                 <Button href={link.path} target="_blank" color="error" variant="contained" key={link.title + index}>
