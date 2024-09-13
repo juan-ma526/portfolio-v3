@@ -146,11 +146,10 @@ export const Projects = () => {
                 width: { xs: "300px", sm: "450px", md: "500px" },
                 height: { xs: "200px", sm: "250px", md: "300px" },
                 textAlign: "center",
-                bgcolor: "red",
                 mb: "32px",
               }}
             >
-              <Carrousel />
+              <Carrousel imagenes={selectedProject?.img} />
             </Box>
             <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", gap: 1, mb: "22px" }}>
               {selectedProject?.links.map((link, index) => (
