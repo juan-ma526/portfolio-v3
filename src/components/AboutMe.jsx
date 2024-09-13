@@ -36,7 +36,7 @@ export const AboutMe = () => {
         flexDirection="column"
         justifyContent="start"
         alignContent="center"
-        maxWidth={1200}
+        maxWidth={1000}
         minHeight={500}
         xs={12}
         md={6}
@@ -97,6 +97,9 @@ export const AboutMe = () => {
           }}
         />
         <Button
+          component="a"
+          href="/Martin-Perez-CV.pdf"
+          download="Martin-Perez-CV.pdf"
           size="large"
           sx={{
             backgroundColor: "white",
