@@ -5,9 +5,11 @@ import Navbar from "./components/Navbar";
 import { AboutMe } from "./components/AboutMe";
 import { HomeTitle } from "./components/HomeTitle";
 import StepperJobs from "./components/StepperJobs";
+import { Footer } from "./components/Footer";
 import { Skills } from "./components/Skills";
 import { Projects } from "./components/Projects";
-import { Footer } from "./components/Footer";
+
+
 
 function App() {
   return (

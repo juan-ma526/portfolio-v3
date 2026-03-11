@@ -10,10 +10,10 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 const steps = [
   {
     label: 'Desarrollador Mobile Front End',
-    description: `Frontend developer, encargado de Implementar diseños desde Figma en la interfaz móvil utilizando React Native con Expo. Crear y optimizar componentes frontend basados en los diseños proporcionados. Participar en la planificación y desarrollo de nuevas funcionalidades.`,
-    date: '10/2024 - actualidad',
+    description: `Lideré la transformación de diseños de Figma a interfaces de Web y Android usando React Native y Expo. Diseñé flujos de navegación complejos y desarrollé la lógica de negocio para requerimientos a medida, incluyendo autenticación (Google Cloud), notificaciones push, persistencia de datos y manejo de estado (Zustand/Context). Mi rol abarcó desde la refactorización continua del frontend para optimizar componentes, hasta el desarrollo de nuevos endpoints y tablas en NestJS. Además, gestioné el versionado y despliegues a la Play Store utilizando EAS CLI.`,
+    date: '10/2024 - 04/2026',
     Place: 'Diabecop',
-    Link: '',
+    Link: 'https://diabecop-dev.com.ar/',
   },
   {
     label: 'Desarrollador Front End',
@@ -54,7 +54,7 @@ export default function StepperJobs() {
       <Typography
         id="trabajos"
         variant="h2"
-        sx={{ ml: { xs: '20px', md: '400px' }, fontWeight: 700 }}
+        sx={{ ml: { xs: '20px', md: '400px' }, fontWeight: 700, fontSize: { xs: '1.875rem', md: '2.25rem' }, color: 'white' }}
       >
         Experiencia
       </Typography>

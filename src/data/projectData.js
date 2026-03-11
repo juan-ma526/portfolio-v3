@@ -30,9 +30,25 @@ import rifasOscar from "../assets/projects/logos/RifasOscar.png";
 import tmdb from "../assets/projects/logos/TMDB.png";
 import webTurnApp from "../assets/projects/logos/WebTurnApp.png";
 
+import appDiabecop from "../assets/projects/diabecop.png";
+
 export const projects = [
-  {
+   {
     id: 1,
+    color: "from-red-300 to-blue-300",
+    title: "App Diabecop",
+    desc: "Diabecop es una aplicación innovadora diseñada para el control efectivo de la diabetes. Con 3 funcionalidades clave y soporte de IA integrado, te ofrece la ayuda que necesitas para gestionar tu alimentación de manera óptima.",
+    img: [appDiabecop],
+    logo: appDiabecop,
+    links: [
+      { title: "App", path: "https://app.diabecop-dev.com.ar/sign-in" },
+      { title: "Diabecop", path: "https://diabecop-dev.com.ar" },
+      { title: "Google Play", path: "https://play.google.com/store/apps/details?id=com.diabecop" },
+    ],
+    icons: ["React Native Expo", "AI", "EAS CLI", "Jira", "Slack", "Push Notifications", "Zustand", "Nest JS", "PostgreSQL", "Jwt", "Css", "Next JS", "Typescript" , "MercadoPago", "AWS S3", "Docker", "GitHub"],
+  },
+  {
+    id: 2,
     color: "from-red-300 to-blue-300",
     title: "Turnos Web",
     desc: "Aplicación web que permite la reserva de turnos para empresas con sucursales físicas, posibilitando la administración de la cantidad de clientes en la locación. Cada sucursal podrá diferenciar la cantidad de clientes en simultáneo que podrá recibir y los rangos horarios, desde el usuario administrador/operador.",
@@ -45,7 +61,7 @@ export const projects = [
     icons: ["Html", "React", "Redux", "Express", "MongoDB", "Jwt", "Sass", "Javascript"],
   },
   {
-    id: 2,
+    id: 3,
     color: "from-blue-300 to-violet-300",
     title: "TMBD Movie",
     desc: "Aplicación de Películas, para poder ver las películas o series en cartelera o por género, y poder ver información de cada película o serie para poder ver el tráiler de cada una. A su vez podes tener un registro de usuario para poder almacenar las películas favoritas y tener una lista de películas o series favoritas.",
@@ -59,7 +75,7 @@ export const projects = [
     icons: ["Html", "React", "Express", "PostgreSql", "Jwt", "Css", "Javascript"],
   },
   {
-    id: 3,
+    id: 4,
     color: "from-violet-300 to-purple-300",
     title: "COMO EN CASA",
     desc: "Aplicación Ecommerce para visualizar y poder ordenar entre platos de comidas, con la posibilidad de tener administradores para manejar los productos y el stock de cada comida, y poder manipular las órdenes. También tiene un carrito de compras en el que queda un historial de los pedidos realizados.",
@@ -69,7 +85,7 @@ export const projects = [
     icons: ["Html", "React", "Redux", "Express", "Postgresql", "Jwt", "Css", "Javascript"],
   },
   {
-    id: 4,
+    id: 5,
     color: "from-purple-300 to-red-300",
     title: "Ecosistema App",
     desc: "Proyecto de una app de quinto impacto para la creación de proveedores de servicios y publicaciones de noticias relacionadas con el impacto en el medio ambiente. Implementación de OAuth de Google, un panel de administración para la aprobación o rechazo de proveedores, para ver cantidad de vistas de publicaciones.",
@@ -82,7 +98,7 @@ export const projects = [
     icons: ["Html", "Java17", "Css", "Jwt", "Cloudinary", "MariaDB", "Oauth", "React", "MaterialUI"],
   },
   {
-    id: 5,
+    id: 6,
     color: "from-purple-300 to-red-300",
     title: "Sorteo Devtalles",
     desc: "App web para el concurso realizado para la página https://cursos.devtalles.com/. Dicha app fue realizada en una semana con la posibilidad de crear sorteos, modificarlos y eliminarlos. Se necesita discord api, y estar en el servidor de devtalles para poder participar. En el panel admin se puede elegir el ganador aleatoriamente y ver los participantes en cada sorteo.",
@@ -96,7 +112,7 @@ export const projects = [
     icons: ["Html", "NextJs", "Express", "MongoDB", "Jwt", "TailwindCss", "Javascript"],
   },
   {
-    id: 6,
+    id: 7,
     color: "from-purple-300 to-red-300",
     title: "Sorteo Rifa",
     desc: "Mini Proyecto Freelance. Se trata de una aplicación web para la compra de rifas, para sortear determinados productos. Con la posibilidad de comprar n cantidad de tickets, dándote la cantidad de tickets comprados. El admin puede crear el stock de tickets, borrar dicho stock, seleccionar un ganador, buscar un ticket en específico, y ver los tickets que fueron comprados.",
@@ -109,7 +125,7 @@ export const projects = [
     icons: ["Html", "React", "Express", "MongoDB", "Css", "Javascript"],
   },
   {
-    id: 7,
+    id: 8,
     color: "from-purple-300 to-red-300",
     title: "Perfect Mentor",
     desc: "Aplicación web (Mobile first) que permita encontrar a tu mentor ideal. Permite la creación de usuarios y la posibilidad de elegir entre ser un mentor o un mentee, poder machear entre los usuarios verificados disponibles, y con los match positivos tener un chat para comunicarse con ellos.",

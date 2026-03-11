@@ -1,166 +1,315 @@
-import { Box, Button, Grid2, Icon, Modal, Typography } from "@mui/material";
-import { projects } from "../data/projectData";
-import { useState } from "react";
+import React, { useState } from "react";
+import { 
+  Box, Typography, Grid, Card, CardContent, CardMedia, CardActionArea, 
+  Dialog, DialogContent, DialogTitle, IconButton, Button, Chip 
+} from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
-import { Carrousel } from "./Carrousel";
+import { FaGithub, FaYoutube, FaExternalLinkAlt } from "react-icons/fa";
+
+// Importa aquí tu data exactamente como la tienes
+import { projects } from "../data/projectData"; 
 
 export const Projects = () => {
-  const [open, setOpen] = useState(false);
-  const [selectedProject, setSelectedProject] = useState(null);
+  // Estados para manejar el Modal
+  const [openModal, setOpenModal] = useState(false);
+  const [proyectoSeleccionado, setProyectoSeleccionado] = useState(null);
 
-  const handleOpen = (project) => {
-    setOpen(true);
-    setSelectedProject(project);
+  const handleOpen = (proyecto) => {
+    setProyectoSeleccionado(proyecto);
+    setOpenModal(true);
   };
 
   const handleClose = () => {
-    setOpen(false);
+    setOpenModal(false);
+    setProyectoSeleccionado(null);
   };
 
-  const style = {
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    boxShadow: 24,
-    pt: 2,
-    px: 4,
-    pb: 3,
+  // Función para asignar el icono correcto según el título del link
+  const getLinkIcon = (title) => {
+    if (title.toLowerCase().includes("github")) return <FaGithub />;
+    if (title.toLowerCase().includes("video")) return <FaYoutube />;
+    return <FaExternalLinkAlt />;
   };
+
   return (
-    <>
-      <Typography id="proyectos" variant="h2" sx={{ mt: "80px", ml: { xs: "20px", md: "70px" } }}>
+    <Box
+      id="proyectos"
+      component="section"
+      sx={{ py: 0, bgcolor: '#121212', scrollMarginTop: '85px' }}
+    >
+      {/* TÍTULO */}
+      <Typography
+        variant="h2"
+        sx={{
+          ml: { xs: '20px', md: '400px' },
+          fontWeight: 700,
+          fontSize: { xs: '1.875rem', md: '2.25rem' },
+          color: 'white',
+        }}
+      >
         Proyectos
       </Typography>
       <Box
         sx={{
-          display: "inline-block",
-          width: "90px",
-          color: "#00FFFF",
           borderBottom: 4,
-          mb: "60px",
-          ml: { xs: "20px", md: "70px" },
+          borderColor: '#FF1D8D',
+          width: '100px',
+          ml: { xs: '20px', md: '400px' },
+          mb: { xs: '32px' },
         }}
-      ></Box>
-      <Grid2
+      />
+
+      {/* GRID DE TARJETAS ESTANDARIZADAS */}
+      <Grid
         container
-        spacing={2}
-        sx={{ justifyContent: "center", alignContent: "stretch", mb: "22px", mx: { xs: "20px", md: "60px" } }}
+        spacing={4}
+        justifyContent="center"
+        sx={{ maxWidth: '1200px', mx: 'auto', px: 3 }}
       >
-        {projects.map((project) => (
-          <Grid2
-            container
-            onClick={() => handleOpen(project)}
-            direction={{ xs: "column", md: "row" }}
-            size={{ xs: 6, md: 6, lg: 3 }}
-            key={project.title}
-            sx={{
-              backgroundColor: "white",
-              cursor: "pointer",
-              height: { xs: "130px", sm: "280px", md: "325px" },
-              justifyContent: "center",
-              alignContent: "center",
-              borderRadius: "20px",
-              transition: "transform .2s",
-              "&:hover": {
-                transform: "scale(1.2)",
-              },
-              boxShadow: "0px 0px 4px white",
-            }}
-          >
-            <img
-              src={project.logo}
-              alt="imagen icono"
-              style={{ width: "100%", height: "100%", borderRadius: "20px" }}
-            />
-          </Grid2>
+        {projects.map((proyecto) => (
+          <Grid item xs={12} sm={6} md={4} key={proyecto.id}>
+            <Card
+              sx={{
+                height: '100%',
+                display: 'flex',
+                flexDirection: 'column',
+                bgcolor: 'rgba(255, 255, 255, 0.03)', // Cristal oscuro
+                borderRadius: '16px',
+                border: '1px solid rgba(0, 255, 255, 0.1)', // Borde cian sutil
+                transition: 'all 0.3s ease',
+                '&:hover': {
+                  transform: 'translateY(-8px)',
+                  boxShadow: '0 12px 24px rgba(0, 255, 255, 0.15)',
+                  borderColor: 'rgba(0, 255, 255, 0.4)',
+                },
+              }}
+            >
+              {/* ActionArea hace que toda la tarjeta sea clickeable */}
+              <CardActionArea
+                onClick={() => handleOpen(proyecto)}
+                sx={{
+                  height: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'flex-start',
+                }}
+              >
+                {/* LOGO DEL PROYECTO (Fondo negro para que resalten) */}
+                <Box
+                  sx={{
+                    width: '100%',
+                    bgcolor: '#0a0a0a',
+                    p: 3,
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    height: '200px',
+                  }}
+                >
+                  <CardMedia
+                    component="img"
+                    image={proyecto.logo}
+                    alt={proyecto.title}
+                    sx={{
+                      maxHeight: '100%',
+                      objectFit: 'contain',
+                      filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.5))',
+                    }}
+                  />
+                </Box>
+
+                <CardContent sx={{ flexGrow: 1, p: 3, width: '100%' }}>
+                  <Typography
+                    gutterBottom
+                    variant="h5"
+                    component="h2"
+                    sx={{
+                      color: 'white',
+                      fontWeight: 'bold',
+                      textAlign: 'center',
+                    }}
+                  >
+                    {proyecto.title}
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      color: '#00FFFF',
+                      textAlign: 'center',
+                      mt: 2,
+                      fontWeight: 500,
+                    }}
+                  >
+                    Click para ver detalles &rarr;
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+          </Grid>
         ))}
+      </Grid>
 
-        <Modal
-          open={open}
-          onClose={handleClose}
-          aria-labelledby="child-modal-title"
-          aria-describedby="child-modal-description"
-        >
-          <Box
-            sx={{
-              ...style,
-              width: { xs: "350px", sm: "580px", md: "auto" },
-              padding: "16px 10px",
-              background: "linear-gradient(135deg, black, #333333)",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "center",
-              borderRadius: "22px",
-            }}
-          >
-            <Icon
-              onClick={handleClose}
+      {/* MODAL DE DETALLES (MUI Dialog) */}
+      <Dialog
+        open={openModal}
+        onClose={handleClose}
+        maxWidth="md"
+        fullWidth
+        PaperProps={{
+          sx: {
+            bgcolor: '#161616', // Fondo oscuro del modal
+            border: '1px solid rgba(255, 29, 141, 0.3)', // Borde magenta
+            borderRadius: '16px',
+            boxShadow: '0 0 30px rgba(0,0,0,0.8)',
+            color: 'white',
+          },
+        }}
+      >
+        {proyectoSeleccionado && (
+          <>
+            <DialogTitle
               sx={{
-                position: "absolute",
-                cursor: "pointer",
-                right: "10px",
-                top: "10px",
-                fontSize: "2rem",
-                justifyContent: "center",
-                alignItems: "center",
-                display: "flex",
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                pb: 1,
               }}
-              color="error"
             >
-              <CloseIcon sx={{ fontSize: "2rem" }} />
-            </Icon>
-            <Typography
-              variant="h3"
-              sx={{ color: "white", mb: "16px", fontWeight: 500, fontSize: { xs: "2rem", md: "44px" } }}
-            >
-              {selectedProject?.title}
-            </Typography>
-            <Typography
-              variant="body1"
-              sx={{ color: "white", textAlign: "center", mb: "16px", fontSize: { md: "18px" } }}
-            >
-              {selectedProject?.desc}
-            </Typography>
-            <Box
-              sx={{
-                display: "flex",
-                flexWrap: { xs: "wrap", md: "nowrap" },
+              <Typography
+                variant="h4"
+                component="span"
+                sx={{ fontWeight: 'bold' }}
+              >
+                {proyectoSeleccionado.title}
+              </Typography>
+              <IconButton
+                onClick={handleClose}
+                sx={{
+                  color: '#FF1D8D',
+                  '&:hover': { bgcolor: 'rgba(255, 29, 141, 0.1)' },
+                }}
+              >
+                <CloseIcon />
+              </IconButton>
+            </DialogTitle>
 
-                justifyContent: "center",
-                alignItems: "center",
-                gap: 2,
-                mb: "22px",
-              }}
+            <DialogContent
+              dividers
+              sx={{ borderColor: 'rgba(255,255,255,0.1)' }}
             >
-              {selectedProject?.icons.map((icon) => (
-                <Button variant="outlined" color="error" key={icon}>
-                  {icon}
-                </Button>
-              ))}
-            </Box>
-            {/* Box Img */}
-            <Box
-              sx={{
-                width: { xs: "300px", sm: "450px", md: "500px" },
-                height: { xs: "200px", sm: "250px", md: "300px" },
-                textAlign: "center",
-                mb: "32px",
-              }}
-            >
-              <Carrousel imagenes={selectedProject?.img} />
-            </Box>
-            <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", gap: 1, mb: "22px" }}>
-              {selectedProject?.links.map((link, index) => (
-                <Button href={link.path} target="_blank" color="error" variant="contained" key={link.title + index}>
-                  {link.title}
-                </Button>
-              ))}
-            </Box>
-          </Box>
-        </Modal>
-      </Grid2>
-    </>
+              {/* TECNOLOGÍAS (Píldoras) */}
+              <Box
+                sx={{
+                  display: 'flex',
+                  flexWrap: 'wrap',
+                  gap: 1,
+                  mb: 3,
+                  justifyContent: 'center',
+                }}
+              >
+                {proyectoSeleccionado.icons.map((tech, i) => (
+                  <Chip
+                    key={i}
+                    label={tech}
+                    size="small"
+                    sx={{
+                      bgcolor: 'transparent',
+                      color: '#00FFFF',
+                      border: '1px solid rgba(0, 255, 255, 0.3)',
+                      fontWeight: 500,
+                    }}
+                  />
+                ))}
+              </Box>
+
+              {/* DESCRIPCIÓN */}
+              <Typography
+                variant="body1"
+                sx={{
+                  color: '#A3A3A3',
+                  mb: 4,
+                  textAlign: 'justify',
+                  lineHeight: 1.7,
+                }}
+              >
+                {proyectoSeleccionado.desc}
+              </Typography>
+
+              {/* GALERÍA DE IMÁGENES (Scroll Horizontal) */}
+              <Box
+                sx={{
+                  display: 'flex',
+                  gap: 2,
+                  overflowX: 'auto',
+                  pb: 2,
+                  '&::-webkit-scrollbar': { height: '8px' },
+                  '&::-webkit-scrollbar-thumb': {
+                    bgcolor: '#FF1D8D',
+                    borderRadius: '4px',
+                  },
+                }}
+              >
+                {proyectoSeleccionado.img.map((imagen, index) => (
+                  <Box
+                    key={index}
+                    component="img"
+                    src={imagen}
+                    alt={`Captura ${index + 1}`}
+                    sx={{
+                      height: '250px',
+                      borderRadius: '8px',
+                      width: { xs: '100%', md: '350px' },
+                      objectFit: 'fill',
+                      margin: 'auto',
+                      border: '1px solid rgba(255,255,255,0.1)',
+                    }}
+                  />
+                ))}
+              </Box>
+
+              {/* BOTONES DE ENLACES (Dinámicos) */}
+              <Box
+                sx={{
+                  display: 'flex',
+                  flexWrap: 'wrap',
+                  gap: 2,
+                  justifyContent: 'center',
+                  mt: 4,
+                }}
+              >
+                {proyectoSeleccionado.links.map((link, index) => (
+                  <Button
+                    key={index}
+                    variant="contained"
+                    startIcon={getLinkIcon(link.title)}
+                    href={link.path}
+                    target="_blank"
+                    sx={{
+                      bgcolor:
+                        link.title.toLowerCase() === 'video'
+                          ? '#FF0000'
+                          : '#FF1D8D',
+                      color: 'white',
+                      textTransform: 'none',
+                      fontWeight: 'bold',
+                      '&:hover': {
+                        bgcolor:
+                          link.title.toLowerCase() === 'video'
+                            ? '#CC0000'
+                            : '#D01772',
+                        transform: 'scale(1.05)',
+                      },
+                      transition: 'all 0.2s',
+                    }}
+                  >
+                    {link.title}
+                  </Button>
+                ))}
+              </Box>
+            </DialogContent>
+          </>
+        )}
+      </Dialog>
+    </Box>
   );
 };

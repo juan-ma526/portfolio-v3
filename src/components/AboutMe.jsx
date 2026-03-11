@@ -1,4 +1,4 @@
-import { Avatar, Button, Grid2, Typography } from '@mui/material';
+import { Avatar, Button, Grid, Typography } from '@mui/material';
 import PhotoProfile from '../assets/photoProfile2.png';
 import { keyframes } from '@emotion/react';
 
@@ -16,7 +16,7 @@ const gradientAnimation = keyframes`
 
 export const AboutMe = () => {
   return (
-    <Grid2
+    <Grid
       id="about-me"
       minHeight={589}
       alignItems="center"
@@ -32,7 +32,7 @@ export const AboutMe = () => {
         margin: '22px 22px 100px 22px',
       }}
     >
-      <Grid2
+      <Grid
         display="flex"
         flexDirection="column"
         justifyContent="start"
@@ -46,7 +46,7 @@ export const AboutMe = () => {
         <Typography
           variant="h2"
           sx={{
-            fontSize: { xs: '32px', sm: '42px' },
+            fontSize: { xs: '30px', sm: '42px' },
             color: 'white',
             fontWeight: 700,
             marginBottom: '20px',
@@ -58,12 +58,11 @@ export const AboutMe = () => {
           variant="body1"
           sx={{
             color: 'black',
-            fontSize: { xs: '22px', sm: '24px' },
+            fontSize: { xs: '18px', sm: '24px' },
             marginBottom: '20px',
           }}
         >
-          👋 Me apasionan la <b>programación</b>, la <b>tecnología</b>, y el{' '}
-          <b>deporte</b>. Mi curiosidad es lo que me impulsa a{' '}
+          Soy un{' '}
           <span
             style={{
               color: '#0ab8f7',
@@ -71,22 +70,72 @@ export const AboutMe = () => {
               textShadow: '2px 2px black',
             }}
           >
-            mejorar
+            Desarrollador Frontend & Mobile
           </span>{' '}
-          y seguir aprendiendo constantemente, aplicando cada nuevo conocimiento
-          en los proyectos en los que participo.
+          al que le apasionan los{' '}
+          <span
+            style={{
+              color: '#0ab8f7',
+              fontWeight: 600,
+              textShadow: '2px 2px black',
+            }}
+          >
+            desafíos
+          </span>{' '}
+          y la{' '}
+          <span
+            style={{
+              color: '#0ab8f7',
+              fontWeight: 600,
+              textShadow: '2px 2px black',
+            }}
+          >
+            mejora
+          </span>{' '}
+          continua. Mi mayor fortaleza es la{' '}
+          <span
+            style={{
+              color: '#0ab8f7',
+              fontWeight: 600,
+              textShadow: '2px 2px black',
+            }}
+          >
+            adaptabilidad
+          </span>
+          . Comencé mi camino dominando tecnologías clave del{' '}
+          <span
+            style={{
+              color: '#0ab8f7',
+              fontWeight: 600,
+              textShadow: '2px 2px black',
+            }}
+          >
+            frontend
+          </span>{' '}
+          y rápidamente sumé nuevas herramientas a mi stack para asegurar el
+          éxito de cada entrega,{' '}
+          <span
+            style={{
+              color: '#0ab8f7',
+              fontWeight: 600,
+              textShadow: '2px 2px black',
+            }}
+          >
+            expandiéndome
+          </span>{' '}
+          con fluidez hacia el desarrollo backend cuando los desafíos del
+          proyecto lo exigieron.
         </Typography>
 
         <Typography
           variant="body1"
           sx={{
             color: 'black',
-            fontSize: { xs: '22px', sm: '24px' },
+            fontSize: { xs: '18px', sm: '24px' },
             marginBottom: '20px',
           }}
         >
-          Cuento con <b>habilidades técnicas</b> requeridas en el mundo IT, así
-          como con{' '}
+          En mi día a día, priorizo la{' '}
           <span
             style={{
               color: '#0ab8f7',
@@ -94,21 +143,70 @@ export const AboutMe = () => {
               textShadow: '2px 2px black',
             }}
           >
-            habilidades blandas
+            comunicaciónn
           </span>{' '}
-          para, junto a mis compañeros de equipo, llevar cualquier proyecto
-          adelante.
+          transparente y el{' '}
+          <span
+            style={{
+              color: '#0ab8f7',
+              fontWeight: 600,
+              textShadow: '2px 2px black',
+            }}
+          >
+            trabajo en equipo
+          </span>
+          . Me enfoco en cumplir las metas establecidas,{' '}
+          <span
+            style={{
+              color: '#0ab8f7',
+              fontWeight: 600,
+              textShadow: '2px 2px black',
+            }}
+          >
+            adaptándome
+          </span>{' '}
+          a los ritmos del proyecto y{' '}
+          <span
+            style={{
+              color: '#0ab8f7',
+              fontWeight: 600,
+              textShadow: '2px 2px black',
+            }}
+          >
+            gestionando
+          </span>{' '}
+          los desafíos de forma ágil. Disfruto{' '}
+          <span
+            style={{
+              color: '#0ab8f7',
+              fontWeight: 600,
+              textShadow: '2px 2px black',
+            }}
+          >
+            proponer soluciones
+          </span>
+          ,{' '}
+          <span
+            style={{
+              color: '#0ab8f7',
+              fontWeight: 600,
+              textShadow: '2px 2px black',
+            }}
+          >
+            recibir
+          </span>{' '}
+          feedback para optimizar el código y buscar proactivamente
+          oportunidades de mejora continua en cada aplicación.
         </Typography>
         <Typography
           variant="body1"
           sx={{
             color: 'black',
-            fontSize: { xs: '22px', sm: '24px' },
-            marginBottom: '40px',
+            fontSize: { xs: '18px', sm: '24px' },
+            marginBottom: '20px',
           }}
         >
-          También poseo las competencias necesarias para trabajar en equipo,
-          aportando tanto en el ámbito técnico como en el humano para lograr el{' '}
+          Fuera del editor de código, la{' '}
           <span
             style={{
               color: '#0ab8f7',
@@ -116,37 +214,10 @@ export const AboutMe = () => {
               textShadow: '2px 2px black',
             }}
           >
-            éxito
+            disciplina
           </span>{' '}
-          en cada proyecto.
-        </Typography>
-        {/* <Typography
-          variant="body1"
-          sx={{
-            color: 'black',
-            fontSize: { xs: '22px', sm: '24px' },
-            marginBottom: '20px',
-          }}
-        >
-          Comencé mi camino en <b>Ingeniería en Sistemas</b>, pero en 2022
-          decidí enfocarme en el mundo de la
-          <span style={{ color: 'black' }}>programación</span>, en busca de
-          nuevos desafíos y oportunidades para llevar mis capacidades a otro
-          nivel 🚀 .
-        </Typography> */}
-        <Typography
-          variant="body1"
-          sx={{
-            color: 'black',
-            fontSize: { xs: '22px', sm: '24px' },
-            marginBottom: '20px',
-          }}
-        >
-          En mi día a día como <b>Desarrollador Mobile Web</b>, me enfrento
-          constantemente con el desafio de cumplir con las expectativas en
-          cuanto a diseño y funcionalidad de cada uno de los componentes de la
-          aplicación, para que funcionen correctamente tanto en la version web,
-          como en la version android y ios. Disfruto mi día a día, aprendiendo,{' '}
+          que aplico en el deporte y mis entrenamientos me acompaña en lo
+          profesional: constancia, cero excusas y un{' '}
           <span
             style={{
               color: '#0ab8f7',
@@ -154,13 +225,13 @@ export const AboutMe = () => {
               textShadow: '2px 2px black',
             }}
           >
-            resolviendo
+            compromiso
           </span>{' '}
-          y mejorando en el mundo de la programación 🚀.
+          total con el equipo para lograr el éxito en cada entrega 🚀.
         </Typography>
-      </Grid2>
-      <Grid2
-        minHeight={500}
+      </Grid>
+      <Grid
+        minHeight={350}
         display="flex"
         flexDirection="column"
         alignItems="center"
@@ -195,7 +266,7 @@ export const AboutMe = () => {
         >
           Descarga CV
         </Button>
-      </Grid2>
-    </Grid2>
+      </Grid>
+    </Grid>
   );
 };

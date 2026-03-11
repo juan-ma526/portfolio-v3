@@ -1,103 +1,126 @@
-import { Box, IconButton, Typography } from "@mui/material";
+import { Box, IconButton, Typography, Stack } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import homeImg from "../assets/Home2.jpg";
+import desktop from "../assets/desktop.jpg";
+
 
 export const HomeTitle = () => {
   return (
     <Box
-      id="home-title"
       sx={{
-        backgroundImage: `url(${homeImg})`,
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        height: { xs: "700px", md: "917px" },
-        position: "relative",
-        width: "100%",
-        backgroundAttachment: "scroll",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        marginBottom: "100px",
+        display: 'flex',
+        flexDirection: { xs: 'column', md: 'row' },
+        minHeight: '100vh',
+        bgcolor: '#121212',
+        color: 'white',
       }}
     >
+      {/* MITAD IZQUIERDA: TEXTO */}
       <Box
         sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          textAlign: "center",
-          position: "relative",
-          zIndex: 1,
-          padding: "10px",
-          gap: "20px",
+          flex: 1,
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: { xs: 'center', md: 'flex-start' },
+          px: 4,
+          paddingTop: 14,
+          paddingBottom: {xs: 0, md: 14},          
+          pl: { md: 12 },
         }}
-        color="white"
       >
-        <Typography fontWeight={800} variant="h3" sx={{ fontSize: { xs: "36px", sm: "52px", md: "66px" } }}>
-          Hola soy Martin Perez
-        </Typography>
         <Typography
-          sx={{
-            background: "linear-gradient(to right,#FF007F, #8A2BE2)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-            fontSize: { xs: "70px", sm: "68px", md: "96px" },
-          }}
-          fontWeight={800}
           variant="h1"
+          sx={{
+            fontWeight: 'bold',
+            letterSpacing: '-0.02em',
+            mb: 2,
+            fontSize: { xs: '3rem', md: '4.5rem' },
+            textAlign: { xs: 'center', md: 'left' },
+          }}
         >
-          Fullstack
+          Hola soy MARTÍN PÉREZ
         </Typography>
         <Typography
-          color="#fff"
-          fontWeight={800}
           variant="h2"
-          sx={{ fontSize: { xs: "48px", sm: "40px", md: "56px" } }}
+          sx={{
+            fontWeight: 600,
+            color: '#FF1D8D',
+            mb: 4,
+            fontSize: { xs: '1.875rem', md: '2.25rem' },
+            textAlign: { xs: 'center', md: 'left' },
+          }}
         >
-          Developer
+         Frontend & Mobile Developer
         </Typography>
-        <Box display={"flex"} justifyContent={"center"} alignItems={"center"} gap={2}>
+        <Typography
+          variant="body1"
+          sx={{
+            color: '#A3A3A3',
+            mb: 6,
+            fontSize: '1.125rem',
+            textAlign: { xs: 'center', md: 'left' },
+          }}
+        >
+         Especializado en crear experiencias digitales fluidas para Web y Mobile. Fuerte dominio del ecosistema (React/Nextjs/React Native Expo), con sólida capacidad para integrar y desarrollar soluciones Backend (Node.js/NestJS).
+        </Typography>
+        <Stack direction="row" spacing={3}>
           <IconButton
+            component="a"
             href="https://github.com/juan-ma526"
-            target="_blanck"
+            target="_blank"
+            rel="noopener noreferrer"
             sx={{
-              width: "52px",
-              height: "52px",
-              boxShadow: "0 4px 6px #000000b3",
-              bgcolor: "error.main",
-              backdropFilter: blur("4px"),
-              color: "white",
-              "&:hover": {
-                bgcolor: "black",
-              },
+              color:{ xs: '#ffffff', md: '#A3A3A3' },
+              fontSize: '2.5rem',
+              transition: 'color 0.2s',
+              '&:hover': { color: 'white' },
             }}
-            variant="contained"
           >
-            <GitHubIcon sx={{ width: "32px", height: "32px" }} />
+            <GitHubIcon fontSize="inherit" />
           </IconButton>
           <IconButton
-            href="https://www.linkedin.com/in/juan-ma526/"
-            target="_blanck"
+            component="a"
+            href="https://www.linkedin.com/in/juan-ma526"
+            target="_blank"
+            rel="noopener noreferrer"
             sx={{
-              boxShadow: "0 4px 6px #000000b3",
-              width: "52px",
-              height: "52px",
-              bgcolor: "error.main",
-              fontSize: "2rem",
-              backdropFilter: blur("4px"),
-              color: "white",
-              "&:hover": {
-                bgcolor: "black",
-              },
+              color:{ xs: '#ffffff', md: '#A3A3A3' },
+              fontSize: '2.5rem',
+              transition: 'color 0.2s',
+              '&:hover': { color: 'white' },
             }}
-            variant="contained"
           >
-            <LinkedInIcon sx={{ width: "32px", height: "32px" }} />
+            <LinkedInIcon fontSize="inherit" />
           </IconButton>
-        </Box>
+        </Stack>
+      </Box>
+
+      {/* MITAD DERECHA: IMAGEN */}
+      <Box
+        sx={{
+          flex: 1,
+          position: 'relative',
+          minHeight: { xs: '300px', md: '100vh' },
+          display: { xs: 'none', md: 'block' },
+        }}
+      >
+        <Box
+          component="img"
+          src={desktop}
+          alt="Martin Perez Setup Cyberpunk"
+          sx={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            objectPosition: 'center',
+            display: { xs: 'none', md: 'block' },
+            position: 'absolute',
+            py: 14,
+            top: 0,
+            left: 0,
+          }}
+        />
       </Box>
     </Box>
   );

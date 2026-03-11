@@ -22,6 +22,8 @@ import EmailIcon from "@mui/icons-material/Email";
 import LaptopIcon from "@mui/icons-material/Laptop";
 
 const drawerWidth = 240;
+
+// Tu lista original, intacta
 const navItems = [
   { title: "Inicio", icon: <HomeIcon />, path: "#" },
   { title: "Sobre mi", icon: <PersonIcon />, path: "#about-me" },
@@ -39,17 +41,34 @@ function Navbar(props) {
     setMobileOpen((prevState) => !prevState);
   };
 
+  // El Drawer (Menú lateral móvil) con los colores adaptados
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        Martin Perez
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center", height: '100%', bgcolor: '#121212', color: 'white' }}>
+      <Typography variant="h6" sx={{ my: 3, fontWeight: 'bold', letterSpacing: '2px' }}>
+        <span style={{ color: '#00FFFF' }}>&lt;</span> MP <span style={{ color: '#FF1D8D' }}>/&gt;</span>
       </Typography>
-      <Divider />
+      <Divider sx={{ borderColor: 'rgba(255, 255, 255, 0.1)' }} />
       <List>
         {navItems.map((item, index) => (
           <ListItem key={index} disablePadding>
-            <ListItemButton href={item.path} component="a" sx={{ textAlign: "center" }}>
-              <ListItemText primary={item.title} />
+            <ListItemButton 
+              href={item.path} 
+              component="a" 
+              sx={{ 
+                textAlign: "center", 
+                py: 2,
+                '&:hover': { bgcolor: 'rgba(0, 255, 255, 0.1)' } 
+              }}
+            >
+              <ListItemText 
+                primary={item.title} 
+                sx={{ 
+                  '& .MuiTypography-root': { 
+                    fontWeight: 500,
+                    transition: 'color 0.2s',
+                  } 
+                }} 
+              />
             </ListItemButton>
           </ListItem>
         ))}
@@ -63,32 +82,32 @@ function Navbar(props) {
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <AppBar
-        sx={{
-          boxShadow: "0 4px 6px #000000b3",
-          bgcolor: "#13151a59",
-          backdropFilter: blur("4px"),
-          margin: "30px",
-          width: { xs: "360px", sm: "767px" },
-          opacity: 1,
-          justifyContent: "center",
-          left: { xs: "42%", sm: "47%", md: "50%" },
-          position: "fixed",
-          transform: "translate(-50%)",
-        }}
         component="nav"
+        position="fixed" // Fijo arriba
+        sx={{
+          // ESTILOS NUEVOS: Glassmorphism y Full-Width
+          width: '100%',
+          bgcolor: 'rgba(18, 18, 18, 0.8)', // Fondo casi negro semitransparente
+          backdropFilter: 'blur(12px)', // Efecto esmerilado
+          boxShadow: '0 4px 30px rgba(0, 0, 0, 0.5)',
+          borderBottom: '1px solid rgba(0, 255, 255, 0.15)', // Borde cian sutil
+        }}
       >
-        <Toolbar>
+        <Toolbar sx={{ justifyContent: { xs: 'space-between', md: 'center' }, minHeight: '70px' }}>
+          
+          {/* BOTÓN HAMBURGUESA MOBILE */}
           <IconButton
             color="inherit"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { md: "none" } }}
+            sx={{ mr: 2, display: { md: "none" }, color: '#00FFFF' }}
           >
             <MenuIcon />
           </IconButton>
 
-          <Box sx={{ display: { xs: "none", md: "block" } }}>
+          {/* MENÚ DESKTOP (Acentos Neón) */}
+          <Box sx={{ display: { xs: "none", md: "flex" }, gap: 1 }}>
             {navItems.map((item) => (
               <Button
                 component="a"
@@ -96,10 +115,26 @@ function Navbar(props) {
                 startIcon={item.icon}
                 key={item.title}
                 sx={{
-                  color: "#fff",
+                  color: "#e0e0e0",
+                  textTransform: "none",
+                  fontSize: "1rem",
+                  px: 2,
+                  py: 1,
+                  transition: "all 0.3s ease",
+                  '& .MuiButton-startIcon': {
+                    color: 'inherit', // El icono hereda el color del texto
+                    transition: "color 0.3s ease",
+                  },
+                  // EFECTO NEÓN AL HACER HOVER
                   "&:hover": {
-                    borderBottom: 1,
-                    borderColor: "primary.main",
+                    color: "#00FFFF", // Texto a cian
+                    textShadow: "0 0 8px rgba(0, 255, 255, 0.6)",
+                    bgcolor: "transparent",
+                    transform: "translateY(-2px)", // Saltito
+                    '& .MuiButton-startIcon': {
+                      color: "#FF1D8D", // Icono a magenta en hover (contraste genial)
+                      filter: "drop-shadow(0 0 5px rgba(255, 29, 141, 0.6))"
+                    }
                   },
                 }}
               >
@@ -109,6 +144,8 @@ function Navbar(props) {
           </Box>
         </Toolbar>
       </AppBar>
+      
+      {/* NAVEGACIÓN MOBILE (Drawer) */}
       <nav>
         <Drawer
           container={container}
@@ -116,11 +153,15 @@ function Navbar(props) {
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
+            keepMounted: true, 
           }}
           sx={{
             display: { xs: "block", md: "none" },
-            "& .MuiDrawer-paper": { bgcolor: "black", boxSizing: "border-box", width: drawerWidth },
+            "& .MuiDrawer-paper": { 
+              boxSizing: "border-box", 
+              width: drawerWidth,
+              borderRight: '1px solid rgba(255, 29, 141, 0.2)' // Borde magenta en el menú
+            },
           }}
         >
           {drawer}
