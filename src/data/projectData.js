@@ -32,12 +32,12 @@ import webTurnApp from "../assets/projects/logos/WebTurnApp.png";
 
 import appDiabecop from "../assets/projects/diabecop.png";
 
-export const projects = [
+export const getProjects =  (t) => [
    {
     id: 1,
     color: "from-red-300 to-blue-300",
-    title: "App Diabecop",
-    desc: "Diabecop es una aplicación innovadora diseñada para el control efectivo de la diabetes. Con 3 funcionalidades clave y soporte de IA integrado, te ofrece la ayuda que necesitas para gestionar tu alimentación de manera óptima.",
+    title: t('projects.project1.title'),
+    desc: t('projects.project1.description'),
     img: [appDiabecop],
     logo: appDiabecop,
     links: [
@@ -50,8 +50,8 @@ export const projects = [
   {
     id: 2,
     color: "from-red-300 to-blue-300",
-    title: "Turnos Web",
-    desc: "Aplicación web que permite la reserva de turnos para empresas con sucursales físicas, posibilitando la administración de la cantidad de clientes en la locación. Cada sucursal podrá diferenciar la cantidad de clientes en simultáneo que podrá recibir y los rangos horarios, desde el usuario administrador/operador.",
+    title: t('projects.project2.title'),
+    desc: t('projects.project2.description'),
     img: [turnos1, turnos2, turnos3, turnos4, turnos5],
     logo: webTurnApp,
     links: [
@@ -63,8 +63,8 @@ export const projects = [
   {
     id: 3,
     color: "from-blue-300 to-violet-300",
-    title: "TMBD Movie",
-    desc: "Aplicación de Películas, para poder ver las películas o series en cartelera o por género, y poder ver información de cada película o serie para poder ver el tráiler de cada una. A su vez podes tener un registro de usuario para poder almacenar las películas favoritas y tener una lista de películas o series favoritas.",
+    title: t('projects.project3.title'),
+    desc: t('projects.project3.description'),
     img: [tmdb1, tmdb2, tmdb3],
     logo: tmdb,
     links: [
@@ -77,8 +77,8 @@ export const projects = [
   {
     id: 4,
     color: "from-violet-300 to-purple-300",
-    title: "COMO EN CASA",
-    desc: "Aplicación Ecommerce para visualizar y poder ordenar entre platos de comidas, con la posibilidad de tener administradores para manejar los productos y el stock de cada comida, y poder manipular las órdenes. También tiene un carrito de compras en el que queda un historial de los pedidos realizados.",
+    title: t('projects.project4.title'),
+    desc: t('projects.project4.description'),
     img: [comoCasa1],
     logo: comoEnCasa,
     links: [{ title: "Github", path: "https://github.com/juan-ma526/Ecommerce-Como-en-Casa" }],
@@ -87,8 +87,8 @@ export const projects = [
   {
     id: 5,
     color: "from-purple-300 to-red-300",
-    title: "Ecosistema App",
-    desc: "Proyecto de una app de quinto impacto para la creación de proveedores de servicios y publicaciones de noticias relacionadas con el impacto en el medio ambiente. Implementación de OAuth de Google, un panel de administración para la aprobación o rechazo de proveedores, para ver cantidad de vistas de publicaciones.",
+    title: t('projects.project5.title'),
+    desc: t('projects.project5.description'),
     img: [ecos1, ecos2, ecos3, ecos4, ecos5],
     logo: ecoSistema,
     links: [
@@ -100,8 +100,8 @@ export const projects = [
   {
     id: 6,
     color: "from-purple-300 to-red-300",
-    title: "Sorteo Devtalles",
-    desc: "App web para el concurso realizado para la página https://cursos.devtalles.com/. Dicha app fue realizada en una semana con la posibilidad de crear sorteos, modificarlos y eliminarlos. Se necesita discord api, y estar en el servidor de devtalles para poder participar. En el panel admin se puede elegir el ganador aleatoriamente y ver los participantes en cada sorteo.",
+    title: t('projects.project6.title'),
+    desc: t('projects.project6.description'),
     img: [devtalles1, devtalles2, devtalles3],
     logo: devTalles,
     links: [
@@ -114,8 +114,8 @@ export const projects = [
   {
     id: 7,
     color: "from-purple-300 to-red-300",
-    title: "Sorteo Rifa",
-    desc: "Mini Proyecto Freelance. Se trata de una aplicación web para la compra de rifas, para sortear determinados productos. Con la posibilidad de comprar n cantidad de tickets, dándote la cantidad de tickets comprados. El admin puede crear el stock de tickets, borrar dicho stock, seleccionar un ganador, buscar un ticket en específico, y ver los tickets que fueron comprados.",
+    title: t('projects.project7.title'),
+    desc: t('projects.project7.description'),
     img: [rifaSorteo1, rifaSorteo2, rifaSorteo3],
     logo: rifasOscar,
     links: [
@@ -127,8 +127,8 @@ export const projects = [
   {
     id: 8,
     color: "from-purple-300 to-red-300",
-    title: "Perfect Mentor",
-    desc: "Aplicación web (Mobile first) que permita encontrar a tu mentor ideal. Permite la creación de usuarios y la posibilidad de elegir entre ser un mentor o un mentee, poder machear entre los usuarios verificados disponibles, y con los match positivos tener un chat para comunicarse con ellos.",
+    title: t('projects.project8.title'),
+    desc: t('projects.project8.description'),
     img: [pM1, pM2, pM3],
     logo: perfectMentor,
     links: [{ title: "Github", path: "https://github.com/juan-ma526/perfectMentor" }],

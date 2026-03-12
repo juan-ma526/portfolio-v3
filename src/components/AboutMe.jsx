@@ -1,6 +1,7 @@
 import { Avatar, Button, Grid, Typography } from '@mui/material';
 import PhotoProfile from '../assets/photoProfile2.png';
 import { keyframes } from '@emotion/react';
+import { Trans, useTranslation } from 'react-i18next';
 
 const gradientAnimation = keyframes`
   0% {
@@ -14,7 +15,14 @@ const gradientAnimation = keyframes`
   }
 `;
 
+const highlightStyle = {
+  color: '#0ab8f7',
+  fontWeight: 600,
+  textShadow: '2px 2px black',
+};
+
 export const AboutMe = () => {
+   const { t } = useTranslation();
   return (
     <Grid
       id="about-me"
@@ -52,7 +60,7 @@ export const AboutMe = () => {
             marginBottom: '20px',
           }}
         >
-          SOBRE MÍ
+          {t('about.title')}
         </Typography>
         <Typography
           variant="body1"
@@ -62,69 +70,10 @@ export const AboutMe = () => {
             marginBottom: '20px',
           }}
         >
-          Soy un{' '}
-          <span
-            style={{
-              color: '#0ab8f7',
-              fontWeight: 600,
-              textShadow: '2px 2px black',
-            }}
-          >
-            Desarrollador Frontend & Mobile
-          </span>{' '}
-          al que le apasionan los{' '}
-          <span
-            style={{
-              color: '#0ab8f7',
-              fontWeight: 600,
-              textShadow: '2px 2px black',
-            }}
-          >
-            desafíos
-          </span>{' '}
-          y la{' '}
-          <span
-            style={{
-              color: '#0ab8f7',
-              fontWeight: 600,
-              textShadow: '2px 2px black',
-            }}
-          >
-            mejora
-          </span>{' '}
-          continua. Mi mayor fortaleza es la{' '}
-          <span
-            style={{
-              color: '#0ab8f7',
-              fontWeight: 600,
-              textShadow: '2px 2px black',
-            }}
-          >
-            adaptabilidad
-          </span>
-          . Comencé mi camino dominando tecnologías clave del{' '}
-          <span
-            style={{
-              color: '#0ab8f7',
-              fontWeight: 600,
-              textShadow: '2px 2px black',
-            }}
-          >
-            frontend
-          </span>{' '}
-          y rápidamente sumé nuevas herramientas a mi stack para asegurar el
-          éxito de cada entrega,{' '}
-          <span
-            style={{
-              color: '#0ab8f7',
-              fontWeight: 600,
-              textShadow: '2px 2px black',
-            }}
-          >
-            expandiéndome
-          </span>{' '}
-          con fluidez hacia el desarrollo backend cuando los desafíos del
-          proyecto lo exigieron.
+         <Trans
+            i18nKey="about.paragraph1"
+            components={{ highlight: <span style={highlightStyle} /> }}
+          />
         </Typography>
 
         <Typography
@@ -135,68 +84,10 @@ export const AboutMe = () => {
             marginBottom: '20px',
           }}
         >
-          En mi día a día, priorizo la{' '}
-          <span
-            style={{
-              color: '#0ab8f7',
-              fontWeight: 600,
-              textShadow: '2px 2px black',
-            }}
-          >
-            comunicaciónn
-          </span>{' '}
-          transparente y el{' '}
-          <span
-            style={{
-              color: '#0ab8f7',
-              fontWeight: 600,
-              textShadow: '2px 2px black',
-            }}
-          >
-            trabajo en equipo
-          </span>
-          . Me enfoco en cumplir las metas establecidas,{' '}
-          <span
-            style={{
-              color: '#0ab8f7',
-              fontWeight: 600,
-              textShadow: '2px 2px black',
-            }}
-          >
-            adaptándome
-          </span>{' '}
-          a los ritmos del proyecto y{' '}
-          <span
-            style={{
-              color: '#0ab8f7',
-              fontWeight: 600,
-              textShadow: '2px 2px black',
-            }}
-          >
-            gestionando
-          </span>{' '}
-          los desafíos de forma ágil. Disfruto{' '}
-          <span
-            style={{
-              color: '#0ab8f7',
-              fontWeight: 600,
-              textShadow: '2px 2px black',
-            }}
-          >
-            proponer soluciones
-          </span>
-          ,{' '}
-          <span
-            style={{
-              color: '#0ab8f7',
-              fontWeight: 600,
-              textShadow: '2px 2px black',
-            }}
-          >
-            recibir
-          </span>{' '}
-          feedback para optimizar el código y buscar proactivamente
-          oportunidades de mejora continua en cada aplicación.
+          <Trans
+            i18nKey="about.paragraph2"
+            components={{ highlight: <span style={highlightStyle} /> }}
+          /> 
         </Typography>
         <Typography
           variant="body1"
@@ -206,28 +97,10 @@ export const AboutMe = () => {
             marginBottom: '20px',
           }}
         >
-          Fuera del editor de código, la{' '}
-          <span
-            style={{
-              color: '#0ab8f7',
-              fontWeight: 600,
-              textShadow: '2px 2px black',
-            }}
-          >
-            disciplina
-          </span>{' '}
-          que aplico en el deporte y mis entrenamientos me acompaña en lo
-          profesional: constancia, cero excusas y un{' '}
-          <span
-            style={{
-              color: '#0ab8f7',
-              fontWeight: 600,
-              textShadow: '2px 2px black',
-            }}
-          >
-            compromiso
-          </span>{' '}
-          total con el equipo para lograr el éxito en cada entrega 🚀.
+        <Trans
+            i18nKey="about.paragraph3"
+            components={{ highlight: <span style={highlightStyle} /> }}
+          /> 
         </Typography>
       </Grid>
       <Grid
@@ -264,7 +137,7 @@ export const AboutMe = () => {
             },
           }}
         >
-          Descarga CV
+          {t('about.downloadCV')}
         </Button>
       </Grid>
     </Grid>

@@ -1,18 +1,20 @@
-import React, { useState } from "react";
 import { 
   Box, Typography, Grid, Card, CardContent, CardMedia, CardActionArea, 
   Dialog, DialogContent, DialogTitle, IconButton, Button, Chip 
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import { FaGithub, FaYoutube, FaExternalLinkAlt } from "react-icons/fa";
-
-// Importa aquí tu data exactamente como la tienes
-import { projects } from "../data/projectData"; 
+import { useTranslation } from "react-i18next";
+import { useState } from "react";
+import { getProjects } from "../data/projectData";
 
 export const Projects = () => {
+  const { t } = useTranslation();
+  const projects = getProjects(t);
   // Estados para manejar el Modal
   const [openModal, setOpenModal] = useState(false);
   const [proyectoSeleccionado, setProyectoSeleccionado] = useState(null);
+  
 
   const handleOpen = (proyecto) => {
     setProyectoSeleccionado(proyecto);
@@ -47,7 +49,7 @@ export const Projects = () => {
           color: 'white',
         }}
       >
-        Proyectos
+        {t('projects.title')}
       </Typography>
       <Box
         sx={{
@@ -140,7 +142,7 @@ export const Projects = () => {
                       fontWeight: 500,
                     }}
                   >
-                    Click para ver detalles &rarr;
+                    {t('projects.click')} &rarr;
                   </Typography>
                 </CardContent>
               </CardActionArea>

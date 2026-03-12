@@ -20,22 +20,28 @@ import HomeRepairServiceIcon from "@mui/icons-material/HomeRepairService";
 import SchoolIcon from "@mui/icons-material/School";
 import EmailIcon from "@mui/icons-material/Email";
 import LaptopIcon from "@mui/icons-material/Laptop";
+import { useTranslation } from 'react-i18next';
 
 const drawerWidth = 240;
-
-// Tu lista original, intacta
-const navItems = [
-  { title: "Inicio", icon: <HomeIcon />, path: "#" },
-  { title: "Sobre mi", icon: <PersonIcon />, path: "#about-me" },
-  { title: "Experiencia", icon: <HomeRepairServiceIcon />, path: "#trabajos" },
-  { title: "Proyectos", icon: <LaptopIcon />, path: "#proyectos" },
-  { title: "Tecnologias", icon: <SchoolIcon />, path: "#skills" },
-  { title: "Contacto", icon: <EmailIcon />, path: "#footer" },
-];
 
 function Navbar(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { t, i18n } = useTranslation();
+
+  // Tu lista original, intacta
+  const navItems = [
+    { title: t('navbar.home'),       icon: <HomeIcon />,              path: '#' },
+    { title: t('navbar.about'),      icon: <PersonIcon />,            path: '#about-me' },
+    { title: t('navbar.experience'), icon: <HomeRepairServiceIcon />, path: '#trabajos' },
+    { title: t('navbar.projects'),   icon: <LaptopIcon />,            path: '#proyectos' },
+    { title: t('navbar.skills'),     icon: <SchoolIcon />,            path: '#skills' },
+    { title: t('navbar.contact'),    icon: <EmailIcon />,             path: '#footer' },
+  ];
+
+    const toggleLanguage = () => {
+    i18n.changeLanguage(i18n.language.startsWith('es') ? 'en' : 'es');
+  };
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -72,14 +78,33 @@ function Navbar(props) {
             </ListItemButton>
           </ListItem>
         ))}
+    <Button
+              onClick={toggleLanguage}
+              color="inherit"
+             sx={{
+            px: 4,
+            py: 1,
+            color: '#00FFFF',
+            border: '1px solid rgba(0, 255, 255, 0.3)',
+            borderRadius: '20px',
+            fontWeight: 'bold',
+            '&:hover': {
+              bgcolor: 'rgba(0, 255, 255, 0.1)',
+            }
+          }}
+              variant="outlined"
+            >
+              {i18n.language.startsWith('es') ? 'EN' : 'ES'}
+            </Button>
       </List>
+   
     </Box>
   );
 
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar
         component="nav"
@@ -93,21 +118,25 @@ function Navbar(props) {
           borderBottom: '1px solid rgba(0, 255, 255, 0.15)', // Borde cian sutil
         }}
       >
-        <Toolbar sx={{ justifyContent: { xs: 'space-between', md: 'center' }, minHeight: '70px' }}>
-          
+        <Toolbar
+          sx={{
+            justifyContent: { xs: 'space-between', md: 'center' },
+            minHeight: '70px',
+          }}
+        >
           {/* BOTÓN HAMBURGUESA MOBILE */}
           <IconButton
             color="inherit"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { md: "none" }, color: '#00FFFF' }}
+            sx={{ mr: 2, display: { md: 'none' }, color: '#00FFFF' }}
           >
             <MenuIcon />
           </IconButton>
 
           {/* MENÚ DESKTOP (Acentos Neón) */}
-          <Box sx={{ display: { xs: "none", md: "flex" }, gap: 1 }}>
+          <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 1 }}>
             {navItems.map((item) => (
               <Button
                 component="a"
@@ -115,36 +144,63 @@ function Navbar(props) {
                 startIcon={item.icon}
                 key={item.title}
                 sx={{
-                  color: "#e0e0e0",
-                  textTransform: "none",
-                  fontSize: "1rem",
+                  color: '#e0e0e0',
+                  textTransform: 'none',
+                  fontSize: '1rem',
                   px: 2,
                   py: 1,
-                  transition: "all 0.3s ease",
+                  transition: 'all 0.3s ease',
                   '& .MuiButton-startIcon': {
                     color: 'inherit', // El icono hereda el color del texto
-                    transition: "color 0.3s ease",
+                    transition: 'color 0.3s ease',
                   },
                   // EFECTO NEÓN AL HACER HOVER
-                  "&:hover": {
-                    color: "#00FFFF", // Texto a cian
-                    textShadow: "0 0 8px rgba(0, 255, 255, 0.6)",
-                    bgcolor: "transparent",
-                    transform: "translateY(-2px)", // Saltito
+                  '&:hover': {
+                    color: '#00FFFF', // Texto a cian
+                    textShadow: '0 0 8px rgba(0, 255, 255, 0.6)',
+                    bgcolor: 'transparent',
+                    transform: 'translateY(-2px)', // Saltito
                     '& .MuiButton-startIcon': {
-                      color: "#FF1D8D", // Icono a magenta en hover (contraste genial)
-                      filter: "drop-shadow(0 0 5px rgba(255, 29, 141, 0.6))"
-                    }
+                      color: '#FF1D8D', // Icono a magenta en hover (contraste genial)
+                      filter: 'drop-shadow(0 0 5px rgba(255, 29, 141, 0.6))',
+                    },
                   },
                 }}
               >
                 {item.title}
               </Button>
             ))}
+            <Button
+              onClick={toggleLanguage}
+              color="inherit"
+             sx={{
+                ml: 2, // Lo separa un poco del enlace "Contacto"
+                alignSelf: 'center', // Asegura que esté alineado verticalmente con los demás
+                minWidth: 'auto',
+                px: 2,
+                py: 0.5,
+                color: '#e0e0e0',
+                border: '1px solid rgba(0, 255, 255, 0.3)',
+                borderRadius: '20px',
+                textTransform: 'none',
+                fontWeight: 'bold',
+                transition: 'all 0.3s ease',
+                '&:hover': {
+                  color: '#00FFFF',
+                  borderColor: '#00FFFF',
+                  boxShadow: '0 0 10px rgba(0, 255, 255, 0.5)',
+                  bgcolor: 'rgba(0, 255, 255, 0.05)',
+                  transform: 'translateY(-2px)',
+                }
+              }}
+              variant="outlined"
+            >
+              {i18n.language.startsWith('es') ? 'EN' : 'ES'}
+            </Button>
           </Box>
         </Toolbar>
       </AppBar>
-      
+
       {/* NAVEGACIÓN MOBILE (Drawer) */}
       <nav>
         <Drawer
@@ -153,14 +209,14 @@ function Navbar(props) {
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
-            keepMounted: true, 
+            keepMounted: true,
           }}
           sx={{
-            display: { xs: "block", md: "none" },
-            "& .MuiDrawer-paper": { 
-              boxSizing: "border-box", 
+            display: { xs: 'block', md: 'none' },
+            '& .MuiDrawer-paper': {
+              boxSizing: 'border-box',
               width: drawerWidth,
-              borderRight: '1px solid rgba(255, 29, 141, 0.2)' // Borde magenta en el menú
+              borderRight: '1px solid rgba(255, 29, 141, 0.2)', // Borde magenta en el menú
             },
           }}
         >

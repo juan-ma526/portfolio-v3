@@ -2,9 +2,11 @@ import { Box, IconButton, Typography, Stack } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import desktop from "../assets/desktop.jpg";
+import { useTranslation } from "react-i18next";
 
 
 export const HomeTitle = () => {
+   const { t } = useTranslation();
   return (
     <Box
       sx={{
@@ -39,7 +41,7 @@ export const HomeTitle = () => {
             textAlign: { xs: 'center', md: 'left' },
           }}
         >
-          Hola soy MARTÍN PÉREZ
+          {t('home.greeting')}
         </Typography>
         <Typography
           variant="h2"
@@ -62,7 +64,7 @@ export const HomeTitle = () => {
             textAlign: { xs: 'center', md: 'left' },
           }}
         >
-         Especializado en crear experiencias digitales fluidas para Web y Mobile. Fuerte dominio del ecosistema (React/Nextjs/React Native Expo), con sólida capacidad para integrar y desarrollar soluciones Backend (Node.js/NestJS).
+          {t('home.description')}
         </Typography>
         <Stack direction="row" spacing={3}>
           <IconButton

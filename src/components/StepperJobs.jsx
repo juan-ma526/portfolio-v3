@@ -6,49 +6,49 @@ import StepContent from '@mui/material/StepContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import { useTranslation } from 'react-i18next';
 
+
+export default function StepperJobs() {
+  const { t } = useTranslation();
+  
 const steps = [
   {
-    label: 'Desarrollador Mobile Front End',
-    description: `Lideré la transformación de diseños de Figma a interfaces de Web y Android usando React Native y Expo. Diseñé flujos de navegación complejos y desarrollé la lógica de negocio para requerimientos a medida, incluyendo autenticación (Google Cloud), notificaciones push, persistencia de datos y manejo de estado (Zustand/Context). Mi rol abarcó desde la refactorización continua del frontend para optimizar componentes, hasta el desarrollo de nuevos endpoints y tablas en NestJS. Además, gestioné el versionado y despliegues a la Play Store utilizando EAS CLI.`,
-    date: '10/2024 - 04/2026',
-    Place: 'Diabecop',
+    label: t('StepperJobs.job1.title'),
+    description: t('StepperJobs.job1.description'),
+    date: t('StepperJobs.job1.duration'),
+    Place: t('StepperJobs.job1.company'),
     Link: 'https://diabecop-dev.com.ar/',
   },
   {
-    label: 'Desarrollador Front End',
-    description: `Simulación laboral. MVP realizado por 5 desarrolladores. El objetivo de la practica es crear una web de informacion y divulgacion de proveedores de triple impacto y publicaciones relacionadas al tema.`,
-    date: '06/2024 - 09/2024',
-    Place: 'Semillero Latam',
+    label: t('StepperJobs.job2.title'),
+    description: t('StepperJobs.job2.description'),
+    date: t('StepperJobs.job2.duration'),
+    Place: t('StepperJobs.job2.company'),
     Link: 'https://www.linkedin.com/company/semillero-latam/',
   },
   {
-    label: 'Desarrollador Front End',
-    description:
-      'Concurso de Programacion dado por la comunidad de DevTalles. El objetivo de la aplicación es crear una web de sorteos para poder crear,borrar y actualizar los mismos usando la API de Discord. Solicitar estar en el servidor de discord para participar y poder elegir un ganador aleatoriamente.',
-    date: '03/2024 - 04/2024',
-    Place: 'DevTalles',
+    label: t('StepperJobs.job3.title'),
+    description: t('StepperJobs.job3.description'),
+    date: t('StepperJobs.job3.duration'),
+    Place: t('StepperJobs.job3.company'),
     Link: 'https://www.linkedin.com/school/devtalles/',
   },
   {
-    label: 'Desarrollador FullStack',
-    description:
-      'Proyecto Freelance para la creacion de una web para realizar sorteos, con un manejo de los mismos desde un panel Admin',
-    date: '01/2024 - 02/2024',
-    Place: 'Freelance',
+    label: t('StepperJobs.job4.title'),
+    description: t('StepperJobs.job4.description'),
+    date: t('StepperJobs.job4.duration'),
+    Place: t('StepperJobs.job4.company'),
     Link: '*',
   },
   {
-    label: 'Desarrollador FullStack',
-    description:
-      'Práctica profesional desarrollada para la empresa CRUCE. Proyecto donde se desarrolló una aplicación de turnos para poder crear un administrador, operador y un cliente capaz de reservar, crear sucursales, modificar y operar cada sucursal y turnos, en grupo de 4 personas, utilizando la metodología ágil Scrum.',
-    date: '10/2022 - 12/2022',
-    Place: 'Cruce',
+    label: t('StepperJobs.job5.title'),
+    description: t('StepperJobs.job5.description'),
+    date: t('StepperJobs.job5.duration'),
+    Place: t('StepperJobs.job5.company'),
     Link: 'https://www.linkedin.com/company/cruce/',
   },
 ];
-
-export default function StepperJobs() {
   return (
     <>
       <Typography
@@ -56,7 +56,7 @@ export default function StepperJobs() {
         variant="h2"
         sx={{ ml: { xs: '20px', md: '400px' }, fontWeight: 700, fontSize: { xs: '1.875rem', md: '2.25rem' }, color: 'white' }}
       >
-        Experiencia
+        {t('StepperJobs.title')}
       </Typography>
       <Box
         sx={{

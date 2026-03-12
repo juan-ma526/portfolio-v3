@@ -1,7 +1,4 @@
-import React from "react";
 import { Box, Grid, Typography } from "@mui/material";
-
-// Importaciones de FontAwesome y SimpleIcons
 import { 
   FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaGitAlt, FaGithub, FaShieldAlt, FaKey 
 } from "react-icons/fa";
@@ -9,6 +6,7 @@ import {
   SiJavascript, SiTypescript, SiTailwindcss, SiMui, SiNextdotjs, 
   SiPostgresql, SiSequelize, SiRedux, SiMongodb, SiJsonwebtokens, SiJest 
 } from "react-icons/si";
+import { useTranslation } from "react-i18next";
 
 // Lista completa de tus tecnologías con sus colores oficiales
 const tecnologias = [
@@ -35,6 +33,7 @@ const tecnologias = [
 ];
 
 export const Skills = () => {
+  const { t } = useTranslation();
   return (
     <Box 
       id="skills" 
@@ -50,7 +49,7 @@ export const Skills = () => {
         variant="h2"
         sx={{ ml: { xs: '20px', md: '400px' }, fontWeight: 700, fontSize: { xs: '1.875rem', md: '2.25rem' }, color: 'white' }}
       >
-        Tecnologías
+        {t('skills.title')}
       </Typography>   
          <Box
         sx={{

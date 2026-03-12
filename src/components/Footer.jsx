@@ -1,5 +1,6 @@
 import { Avatar, Box, Button, keyframes, Typography } from '@mui/material';
 import cat from '../assets/catFooter.png';
+import { useTranslation } from 'react-i18next';
 
 const gradientAnimation = keyframes`
   0% {
@@ -14,6 +15,7 @@ const gradientAnimation = keyframes`
 `;
 
 export const Footer = () => {
+  const { t } = useTranslation();
   return (
     <Box
       id="footer"
@@ -100,7 +102,7 @@ export const Footer = () => {
             mb: 2
           }}
         >
-          Contacto
+          {t('footer.contact')}
         </Button>
         <Typography
           sx={{
@@ -109,7 +111,7 @@ export const Footer = () => {
             display: { xs: 'none', md: 'block' },           
           }}
         >
-          Página hecha por @Martin Perez 2024.
+          {t('footer.created')} @Martin Perez 2024.
         </Typography>
         </Box>
 
