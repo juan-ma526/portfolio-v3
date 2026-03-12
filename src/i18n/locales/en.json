@@ -1,0 +1,97 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About Me",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Technologies",
+    "contact": "Contact"
+  },
+  "home": {
+    "greeting": "Hi, I'm Martín Pérez",
+    "description": "Specialized in creating seamless digital experiences for web and mobile. Strong command of the ecosystem (React/Nextjs/React Native Expo), with solid ability to integrate and develop backend solutions (Node.js/NestJS)."
+  },
+  "about": {
+    "title": "ABOUT ME",
+    "paragraph1": "I'm a <highlight>Frontend & Mobile Developer</highlight> who is passionate about <highlight>challenges</highlight> and <highlight>continuous improvement</highlight>. My greatest strength is <highlight>adaptability</highlight>. I started by mastering key <highlight>frontend</highlight> technologies and quickly added new tools to my stack to ensure successful delivery, <highlight>expanding</highlight> smoothly into backend development whenever project challenges demanded it.",
+    "paragraph2": "Day to day, I prioritize <highlight>transparent communication</highlight> and <highlight>teamwork</highlight>. I focus on meeting established goals, <highlight>adapting</highlight> to project rhythms and <highlight>managing</highlight> challenges in an agile way. I enjoy <highlight>proposing solutions</highlight>, <highlight>receiving</highlight> feedback to optimize code, and proactively seeking continuous improvement opportunities in every application.",
+    "paragraph3": "Outside the code editor, the <highlight>discipline</highlight> I apply in sports and training carries over professionally: consistency, no excuses, and total <highlight>commitment</highlight> to the team to achieve success in every delivery 🚀.",
+    "downloadCV": "Download CV"
+  },
+  "StepperJobs": {
+    "title": "Experience",
+    "job1": {
+      "title": "Mobile Frontend Developer",
+      "company": "Diabecop",
+      "duration": "10/2024 - 04/2026",
+      "description": "I led the transformation of Figma designs into web and Android interfaces using React Native and Expo. I designed complex navigation flows and developed business logic for custom requirements, including authentication (Google Cloud), push notifications, data persistence, and state management (Zustand/Context). My role ranged from continuous frontend refactoring to optimize components to developing new endpoints and tables in NestJS. In addition, I managed versioning and deployments to the Play Store using EAS CLI."
+    },
+    "job2": {
+      "title": "Frontend Developer",
+      "company": "Semillero Latam",
+      "duration": "06/2024 - 09/2024",
+      "description": "Work simulation. MVP developed by 5 developers. The objective of the practice is to create a website for information and dissemination of triple impact providers and related publications."
+    },
+    "job3": {
+      "title": "Frontend Developer",
+      "company": "DevTalles",
+      "duration": "03/2024 - 04/2024",
+      "description": "Programming contest given by the DevTalles community. The objective of the application is to create a raffle website to create, delete, and update them using the Discord API. Request to be on the Discord server to participate and be able to choose a winner randomly."
+    },
+    "job4": {
+      "title": "FullStack Developer",
+      "company": "Freelance",
+      "duration": "01/2024 - 02/2024",
+      "description": "Freelance project to create a website for conducting raffles, with management of these raffles from an admin panel."
+    },
+    "job5": {
+      "title": "FullStack Developer",
+      "company": "Cruce",
+      "duration": "10/2022 - 12/2022",
+      "description": "Professional internship developed for the company CRUCE. Project where an appointment application was developed to create an administrator, operator, and a client capable of booking, creating branches, modifying, and operating each branch and appointments, in a group of 4 people, using the agile Scrum methodology."
+    }
+  },
+  "skills": {
+    "title": "Technologies"
+  },
+  "projects": {
+    "title": "Projects",
+    "click": "Click to view details",
+    "project1": {
+      "title": "App Diabecop",
+      "description": "Diabecop is an innovative application designed for effective diabetes management. With 3 key features and integrated AI support, it provides the help you need to manage your diet optimally."
+    },
+    "project2": {
+      "title": "Web Shifts",
+      "description": "Web application that allows booking appointments for companies with physical branches, enabling the management of the number of clients at the location. Each branch can differentiate the number of clients it can receive simultaneously and the time slots, from the admin/operator user."
+    },
+    "project3": {
+      "title": "TMDB Movie",
+      "description": "Movie App, to view movies or series by release date or genre, and to view information about each movie or series and watch the trailer for each one. You can also create a user account to save your favorite movies and create a list of your favorite movies or series."
+    },
+    "project4": {
+      "title": "COMO EN CASA",
+      "description": "Ecommerce application to view and order food dishes, with the possibility of having administrators to manage products and stock of each dish, and to manipulate orders. It also has a shopping cart where a history of orders is kept."
+    },
+    "project5": {
+      "title": "Ecosistema App",
+      "description": "Project for a fifth impact app for the creation of service providers and news publications related to environmental impact. Implementation of Google OAuth, an administration panel for the approval or rejection of providers, to view the number of views of publications."
+    },
+    "project6": {
+      "title": "Devtalles Giveaway",
+      "description": "Web app for the contest held on the https://cursos.devtalles.com/ page. This app was developed in a week with the ability to create, modify, and delete raffles. Discord API is required, and you must be on the DevTalles server to participate. In the admin panel, you can randomly choose the winner and view the participants in each raffle."
+    },
+    "project7": {
+      "title": "Raffle Draw",
+      "description": "Mini Freelance Project. This is a web application for purchasing raffles to draw specific products. With the possibility of buying n number of tickets, giving you the number of tickets purchased. The admin can create the ticket stock, delete said stock, select a winner, search for a specific ticket, and view the tickets that were purchased."
+    },
+    "project8": {
+      "title": "Perfect Mentor",
+      "description": "Web application (mobile first) that allows you to find your ideal mentor. It allows users to be created and the possibility of choosing between being a mentor or a mentee, being able to match between available verified users, and with positive matches, having a chat to communicate with them."
+    }
+  },
+  "footer": {
+    "contact": "Contact",
+    "created": "Created by "
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "navbar": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "skills": "Tecnologías",
+    "contact": "Contacto"
+  },
+  "home": {
+    "greeting": "Hola, soy Martín Pérez",
+    "description": "Especializado en crear experiencias digitales fluidas para web y móvil. Fuerte dominio del ecosistema (React/Nextjs/React Native Expo), con sólida capacidad para integrar y desarrollar soluciones backend (Node.js/NestJS)."
+  },
+  "about": {
+    "title": "SOBRE MÍ",
+    "paragraph1": "Soy un <highlight>Desarrollador Frontend & Mobile</highlight> al que le apasionan los <highlight>desafíos</highlight> y la <highlight>mejora</highlight> continua. Mi mayor fortaleza es la <highlight>adaptabilidad</highlight>. Comencé mi camino dominando tecnologías clave del <highlight>frontend</highlight> y rápidamente sumé nuevas herramientas a mi stack para asegurar el éxito de cada entrega, <highlight>expandiéndome</highlight> con fluidez hacia el desarrollo backend cuando los desafíos del proyecto lo exigieron.",
+    "paragraph2": "En mi día a día, priorizo la <highlight>comunicación</highlight> transparente y el <highlight>trabajo en equipo</highlight>. Me enfoco en cumplir las metas establecidas, <highlight>adaptándome</highlight> a los ritmos del proyecto y <highlight>gestionando</highlight> los desafíos de forma ágil. Disfruto <highlight>proponer soluciones</highlight>, <highlight>recibir</highlight> feedback para optimizar el código y buscar proactivamente oportunidades de mejora continua en cada aplicación.",
+    "paragraph3": "Fuera del editor de código, la <highlight>disciplina</highlight> que aplico en el deporte y mis entrenamientos me acompaña en lo profesional: constancia, cero excusas y un <highlight>compromiso</highlight> total con el equipo para lograr el éxito en cada entrega 🚀.",
+    "downloadCV": "Descarga CV"
+  },
+  "StepperJobs": {
+    "title": "Experiencia",
+    "job1": {
+      "title": "Desarrollador Mobile Frontend",
+      "company": "Diabecop",
+      "duration": "10/2024 - 04/2026",
+      "description": "Lideré la transformación de diseños de Figma a interfaces de Web y Android usando React Native y Expo. Diseñé flujos de navegación complejos y desarrollé la lógica de negocio para requerimientos a medida, incluyendo autenticación (Google Cloud), notificaciones push, persistencia de datos y manejo de estado (Zustand/Context). Mi rol abarcó desde la refactorización continua del frontend para optimizar componentes, hasta el desarrollo de nuevos endpoints y tablas en NestJS. Además, gestioné el versionado y despliegues a la Play Store utilizando EAS CLI."
+    },
+    "job2": {
+      "title": "Desarrollador Frontend",
+      "company": "Semillero Latam",
+      "duration": "06/2024 - 09/2024",
+      "description": "Simulación laboral. MVP realizado por 5 desarrolladores. El objetivo de la práctica es crear una web de información y divulgación de proveedores de triple impacto y publicaciones relacionadas al tema."
+    },
+    "job3": {
+      "title": "Desarrollador Frontend",
+      "company": "DevTalles",
+      "duration": "03/2024 - 04/2024",
+      "description": "Concurso de Programación dado por la comunidad de DevTalles. El objetivo de la aplicación es crear una web de sorteos para poder crear, borrar y actualizar los mismos usando la API de Discord. Solicitar estar en el servidor de discord para participar y poder elegir un ganador aleatoriamente."
+    },
+    "job4": {
+      "title": "Desarrollador FullStack",
+      "company": "Freelance",
+      "duration": "01/2024 - 02/2024",
+      "description": "Proyecto Freelance para la creación de una web para realizar sorteos, con un manejo de los mismos desde un panel Admin"
+    },
+    "job5": {
+      "title": "Desarrollador FullStack",
+      "company": "Cruce",
+      "duration": "10/2022 - 12/2022",
+      "description": "Práctica profesional desarrollada para la empresa CRUCE. Proyecto donde se desarrolló una aplicación de turnos para poder crear un administrador, operador y un cliente capaz de reservar, crear sucursales, modificar y operar cada sucursal y turnos, en grupo de 4 personas, utilizando la metodología ágil Scrum."
+    }
+  },
+  "skills": {
+    "title": "Tecnologías"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "click": "Click para ver detalles",
+    "project1": {
+      "title": "App Diabecop",
+      "description": "Diabecop es una aplicación innovadora diseñada para el control efectivo de la diabetes. Con 3 funcionalidades clave y soporte de IA integrado, te ofrece la ayuda que necesitas para gestionar tu alimentación de manera óptima."
+    },
+    "project2": {
+      "title": "Turnos Web",
+      "description": "Aplicación web que permite la reserva de turnos para empresas con sucursales físicas, posibilitando la administración de la cantidad de clientes en la locación. Cada sucursal podrá diferenciar la cantidad de clientes en simultáneo que podrá recibir y los rangos horarios, desde el usuario administrador/operador."
+    },
+    "project3": {
+      "title": "TMDB Movie",
+      "description": "Aplicación de Películas, para poder ver las películas o series en cartelera o por género, y poder ver información de cada película o serie para poder ver el tráiler de cada una. A su vez podes tener un registro de usuario para poder almacenar las películas favoritas y tener una lista de películas o series favoritas."
+    },
+    "project4": {
+      "title": "COMO EN CASA",
+      "description": "Aplicación Ecommerce para visualizar y poder ordenar entre platos de comidas, con la posibilidad de tener administradores para manejar los productos y el stock de cada comida, y poder manipular las órdenes. También tiene un carrito de compras en el que queda un historial de los pedidos realizados."
+    },
+    "project5": {
+      "title": "Ecosistema App",
+      "description": "Proyecto de una app de quinto impacto para la creación de proveedores de servicios y publicaciones de noticias relacionadas con el impacto en el medio ambiente. Implementación de OAuth de Google, un panel de administración para la aprobación o rechazo de proveedores, para ver cantidad de vistas de publicaciones."
+    },
+    "project6": {
+      "title": "Sorteo Devtalles",
+      "description": "App web para el concurso realizado para la página https://cursos.devtalles.com/. Dicha app fue realizada en una semana con la posibilidad de crear sorteos, modificarlos y eliminarlos. Se necesita discord api, y estar en el servidor de devtalles para poder participar. En el panel admin se puede elegir el ganador aleatoriamente y ver los participantes en cada sorteo."
+    },
+    "project7": {
+      "title": "Sorteo Rifa",
+      "description": "Mini Proyecto Freelance. Se trata de una aplicación web para la compra de rifas, para sortear determinados productos. Con la posibilidad de comprar n cantidad de tickets, dándote la cantidad de tickets comprados. El admin puede crear el stock de tickets, borrar dicho stock, seleccionar un ganador, buscar un ticket en específico, y ver los tickets que fueron comprados."
+    },
+    "project8": {
+      "title": "Perfect Mentor",
+      "description": "Aplicación web (Mobile first) que permita encontrar a tu mentor ideal. Permite la creación de usuarios y la posibilidad de elegir entre ser un mentor o un mentee, poder machear entre los usuarios verificados disponibles, y con los match positivos tener un chat para comunicarse con ellos."
+    }
+  },
+  "footer": {
+    "contact": "Contacto",
+    "created": "Página hecha por "
+  }
+}
