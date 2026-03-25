@@ -1,10 +1,13 @@
 import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
+  typography: {
+    fontFamily: '"Poppins", "Roboto", "Helvetica", "Arial", sans-serif',
+  },
   palette: {
     mode: "light",
     primary: {
-      main: "#FF007F",
+      main: "#C0407A",
     },
     secondary: {
       main: "#00FFFF", //Celeste

@@ -73,10 +73,13 @@ const steps = [
             <Step key={index} expanded>
               <StepLabel
                 sx={{
-                  '& > * > svg': {
+                  '& .MuiStepIcon-root': {
                     fill: '#FF007F',
                     height: '2.5rem',
                     width: '2.5rem',
+                  },
+                  '& .MuiStepIcon-text': {
+                    display: 'none',
                   },
                 }}
               >

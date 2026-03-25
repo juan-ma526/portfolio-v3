@@ -16,9 +16,8 @@ const gradientAnimation = keyframes`
 `;
 
 const highlightStyle = {
-  color: '#0ab8f7',
-  fontWeight: 600,
-  textShadow: '2px 2px black',
+  color: '#60CFFF',
+  fontWeight: 700,
 };
 
 export const AboutMe = () => {
@@ -33,7 +32,7 @@ export const AboutMe = () => {
       sx={{
         borderRadius: '22px',
         background:
-          'linear-gradient(135deg, #00FFFF, #FF007F, #8A2BE2, #333333)',
+          'linear-gradient(135deg, #1a6b7a, #7a2060, #3a1a6e, #1a1a2e)',
         backgroundSize: '400% 400%',
         animation: `${gradientAnimation} 15s ease infinite`,
         padding: '20px',

@@ -11,13 +11,13 @@
     "greeting": "Hi, I'm Martín Pérez",
     "description": "Specialized in creating seamless digital experiences for web and mobile. Strong command of the ecosystem (React/Nextjs/React Native Expo), with solid ability to integrate and develop backend solutions (Node.js/NestJS)."
   },
-  "about": {
-    "title": "ABOUT ME",
-    "paragraph1": "I'm a <highlight>Frontend & Mobile Developer</highlight> who is passionate about <highlight>challenges</highlight> and <highlight>continuous improvement</highlight>. My greatest strength is <highlight>adaptability</highlight>. I started by mastering key <highlight>frontend</highlight> technologies and quickly added new tools to my stack to ensure successful delivery, <highlight>expanding</highlight> smoothly into backend development whenever project challenges demanded it.",
-    "paragraph2": "Day to day, I prioritize <highlight>transparent communication</highlight> and <highlight>teamwork</highlight>. I focus on meeting established goals, <highlight>adapting</highlight> to project rhythms and <highlight>managing</highlight> challenges in an agile way. I enjoy <highlight>proposing solutions</highlight>, <highlight>receiving</highlight> feedback to optimize code, and proactively seeking continuous improvement opportunities in every application.",
-    "paragraph3": "Outside the code editor, the <highlight>discipline</highlight> I apply in sports and training carries over professionally: consistency, no excuses, and total <highlight>commitment</highlight> to the team to achieve success in every delivery 🚀.",
-    "downloadCV": "Download CV"
-  },
+"about": {
+  "title": "ABOUT ME",
+  "paragraph1": "I'm a <highlight>Frontend & Mobile Developer</highlight> passionate about coding and tackling <highlight>challenges</highlight> in order to <highlight>improve</highlight> continuously. I consider myself a highly <highlight>adaptable</highlight> person. I started my journey mastering key <highlight>frontend</highlight> technologies and quickly added new tools to my stack to meet the goals of every project I've been part of. I also had the opportunity to <highlight>contribute</highlight> to backend development whenever the project's challenges required it.",
+  "paragraph2": "On a daily basis, I stand out for my strong <highlight>communication</highlight> skills — I'm a transparent person and a great <highlight>team player</highlight>. I focus on meeting established goals, <highlight>adapting</highlight> to the project's pace and <highlight>managing</highlight> challenges in an agile way. I enjoy <highlight>proposing solutions</highlight>, <highlight>receiving</highlight> feedback to optimize code, and always looking for ways to improve every application I work on.",
+  "paragraph3": "Outside of code, I'm really passionate about sports and training, and I approach those activities with <highlight>consistency</highlight> and <highlight>commitment</highlight> 🚀.",
+  "downloadCV": "Download CV"
+},
   "StepperJobs": {
     "title": "Experience",
     "job1": {
