@@ -9,14 +9,15 @@
   },
   "home": {
     "greeting": "Hola, soy Martín Pérez",
+    "subtitle": "Frontend & Mobile Developer",
     "description": "Especializado en crear experiencias digitales fluidas para web y móvil. Fuerte dominio del ecosistema (React/Nextjs/React Native Expo), con sólida capacidad para integrar y desarrollar soluciones backend (Node.js/NestJS)."
   },
   "about": {
     "title": "SOBRE MÍ",
     "paragraph1": "Soy un <highlight>Desarrollador Frontend & Mobile</highlight> al que le apasionan codear y encarar <highlight>desafíos</highlight> para poder <highlight>mejorar</highlight> continuamente. Me considero una persona con gran <highlight>adaptabilidad</highlight>. Comencé mi camino dominando tecnologías clave del <highlight>frontend</highlight> y rápidamente sumé nuevas herramientas a mi stack para poder cumplir las metas necesarias de todos los proyectos en los que participe. A su vez tuve la oportunidad de <highlight>participar</highlight> en el desarrollo backend cuando los desafíos del proyecto lo requirieron.",
-    "paragraph2": "En mi día a día, me destaco por tener buena <highlight>comunicación</highlight>, soy una persona transparente y buena <highlight>trabajando en equipo</highlight>. Me enfoco en cumplir las metas establecidas, <highlight>adaptándome</highlight> a los ritmos del proyecto y <highlight>gestionando</highlight> los desafíos de forma ágil. Disfruto <highlight>proponer soluciones</highlight>, <highlight>recibir</highlight> feedback para optimizar el código y buscar mejorar cada aplicación en la que trabajo.",    
+    "paragraph2": "En mi día a día, me destaco por tener buena <highlight>comunicación</highlight>, soy una persona transparente y buena <highlight>trabajando en equipo</highlight>. Me enfoco en cumplir las metas establecidas, <highlight>adaptándome</highlight> a los ritmos del proyecto y <highlight>gestionando</highlight> los desafíos de forma ágil. Disfruto <highlight>proponer soluciones</highlight>, <highlight>recibir</highlight> feedback para optimizar el código y buscar mejorar cada aplicación en la que trabajo.",
     "paragraph3": "Fuera del código, me entusiasma mucho el deporte y el entrenamiento, y encaro esas actividades con <highlight>constancia</highlight> y <highlight>compromiso</highlight> 🚀.",
-    "downloadCV": "Descarga CV"
+    "downloadCV": "Descargar CV"
   },
   "StepperJobs": {
     "title": "Experiencia",
@@ -30,25 +31,25 @@
       "title": "Desarrollador Frontend",
       "company": "Semillero Latam",
       "duration": "06/2024 - 09/2024",
-      "description": "Simulación laboral. MVP realizado por 5 desarrolladores. El objetivo de la práctica es crear una web de información y divulgación de proveedores de triple impacto y publicaciones relacionadas al tema."
+      "description": "Simulación laboral realizada por un equipo de 5 desarrolladores. El objetivo de la práctica fue crear una web de información y divulgación de proveedores de triple impacto y publicaciones relacionadas al tema."
     },
     "job3": {
       "title": "Desarrollador Frontend",
       "company": "DevTalles",
       "duration": "03/2024 - 04/2024",
-      "description": "Concurso de Programación dado por la comunidad de DevTalles. El objetivo de la aplicación es crear una web de sorteos para poder crear, borrar y actualizar los mismos usando la API de Discord. Solicitar estar en el servidor de discord para participar y poder elegir un ganador aleatoriamente."
+      "description": "Concurso de programación organizado por la comunidad de DevTalles. El objetivo de la aplicación fue crear una web de sorteos para poder crear, borrar y actualizar los mismos usando la API de Discord. Había que estar en el servidor de Discord para participar y poder elegir un ganador de forma aleatoria."
     },
     "job4": {
       "title": "Desarrollador FullStack",
       "company": "Freelance",
       "duration": "01/2024 - 02/2024",
-      "description": "Proyecto Freelance para la creación de una web para realizar sorteos, con un manejo de los mismos desde un panel Admin"
+      "description": "Proyecto freelance para la creación de una web para realizar sorteos, con gestión de los mismos desde un panel de administración."
     },
     "job5": {
       "title": "Desarrollador FullStack",
       "company": "Cruce",
       "duration": "10/2022 - 12/2022",
-      "description": "Práctica profesional desarrollada para la empresa CRUCE. Proyecto donde se desarrolló una aplicación de turnos para poder crear un administrador, operador y un cliente capaz de reservar, crear sucursales, modificar y operar cada sucursal y turnos, en grupo de 4 personas, utilizando la metodología ágil Scrum."
+      "description": "Práctica profesional desarrollada para la empresa CRUCE. Proyecto donde se desarrolló una aplicación de turnos que permitía crear un administrador, un operador y un cliente capaz de reservar, crear sucursales, modificar y operar cada sucursal y sus turnos. Realizado en grupo de 4 personas, utilizando la metodología ágil Scrum."
     }
   },
   "skills": {
@@ -57,37 +58,53 @@
   "projects": {
     "title": "Proyectos",
     "click": "Click para ver detalles",
+    "close": "Cerrar",
+    "stack": "Stack tecnológico",
+    "categories": {
+      "mobile": "Mobile",
+      "web": "Web",
+      "fullstack": "Fullstack",
+      "ecommerce": "E-commerce"
+    },
+    "linkTypes": {
+      "github": "Código",
+      "video": "Video",
+      "demo": "Demo",
+      "app": "App",
+      "website": "Sitio",
+      "playstore": "Google Play"
+    },
     "project1": {
       "title": "App Diabecop",
-      "description": "Diabecop es una aplicación innovadora diseñada para el control efectivo de la diabetes. Con 3 funcionalidades clave y soporte de IA integrado, te ofrece la ayuda que necesitas para gestionar tu alimentación de manera óptima."
+      "description": "Diabecop es una aplicación innovadora diseñada para el control efectivo de la diabetes. Con 3 funcionalidades clave y soporte de IA integrado, te ofrece la ayuda que necesitás para gestionar tu alimentación de manera óptima."
     },
     "project2": {
       "title": "Turnos Web",
-      "description": "Aplicación web que permite la reserva de turnos para empresas con sucursales físicas, posibilitando la administración de la cantidad de clientes en la locación. Cada sucursal podrá diferenciar la cantidad de clientes en simultáneo que podrá recibir y los rangos horarios, desde el usuario administrador/operador."
+      "description": "Aplicación web que permite la reserva de turnos para empresas con sucursales físicas, posibilitando la administración de la cantidad de clientes en la locación. Cada sucursal puede diferenciar la cantidad de clientes en simultáneo que podrá recibir y los rangos horarios, desde el usuario administrador/operador."
     },
     "project3": {
       "title": "TMDB Movie",
-      "description": "Aplicación de Películas, para poder ver las películas o series en cartelera o por género, y poder ver información de cada película o serie para poder ver el tráiler de cada una. A su vez podes tener un registro de usuario para poder almacenar las películas favoritas y tener una lista de películas o series favoritas."
+      "description": "Aplicación de películas para ver las películas o series en cartelera o por género, y poder ver información de cada una junto con su tráiler. Además, podés tener un registro de usuario para almacenar tus películas favoritas y armar una lista de películas o series preferidas."
     },
     "project4": {
       "title": "COMO EN CASA",
-      "description": "Aplicación Ecommerce para visualizar y poder ordenar entre platos de comidas, con la posibilidad de tener administradores para manejar los productos y el stock de cada comida, y poder manipular las órdenes. También tiene un carrito de compras en el que queda un historial de los pedidos realizados."
+      "description": "Aplicación Ecommerce para visualizar y ordenar entre platos de comida, con la posibilidad de tener administradores para manejar los productos y el stock de cada comida, y manipular las órdenes. También cuenta con un carrito de compras en el que queda un historial de los pedidos realizados."
     },
     "project5": {
       "title": "Ecosistema App",
-      "description": "Proyecto de una app de quinto impacto para la creación de proveedores de servicios y publicaciones de noticias relacionadas con el impacto en el medio ambiente. Implementación de OAuth de Google, un panel de administración para la aprobación o rechazo de proveedores, para ver cantidad de vistas de publicaciones."
+      "description": "Proyecto de una app de triple impacto para la creación de proveedores de servicios y publicaciones de noticias relacionadas con el impacto en el medio ambiente. Implementación de Google OAuth, un panel de administración para la aprobación o rechazo de proveedores, y visualización de la cantidad de vistas de las publicaciones."
     },
     "project6": {
       "title": "Sorteo Devtalles",
-      "description": "App web para el concurso realizado para la página https://cursos.devtalles.com/. Dicha app fue realizada en una semana con la posibilidad de crear sorteos, modificarlos y eliminarlos. Se necesita discord api, y estar en el servidor de devtalles para poder participar. En el panel admin se puede elegir el ganador aleatoriamente y ver los participantes en cada sorteo."
+      "description": "App web para el concurso realizado para la página https://cursos.devtalles.com/. Dicha app fue realizada en una semana con la posibilidad de crear sorteos, modificarlos y eliminarlos. Requiere la API de Discord y estar en el servidor de DevTalles para poder participar. Desde el panel admin se puede elegir el ganador de forma aleatoria y ver los participantes en cada sorteo."
     },
     "project7": {
       "title": "Sorteo Rifa",
-      "description": "Mini Proyecto Freelance. Se trata de una aplicación web para la compra de rifas, para sortear determinados productos. Con la posibilidad de comprar n cantidad de tickets, dándote la cantidad de tickets comprados. El admin puede crear el stock de tickets, borrar dicho stock, seleccionar un ganador, buscar un ticket en específico, y ver los tickets que fueron comprados."
+      "description": "Mini proyecto freelance. Se trata de una aplicación web para la compra de rifas para sortear determinados productos. Con la posibilidad de comprar n cantidad de tickets, dándote la cantidad de tickets comprados. El admin puede crear el stock de tickets, borrar dicho stock, seleccionar un ganador, buscar un ticket en específico y ver los tickets que fueron comprados."
     },
     "project8": {
       "title": "Perfect Mentor",
-      "description": "Aplicación web (Mobile first) que permita encontrar a tu mentor ideal. Permite la creación de usuarios y la posibilidad de elegir entre ser un mentor o un mentee, poder machear entre los usuarios verificados disponibles, y con los match positivos tener un chat para comunicarse con ellos."
+      "description": "Aplicación web (mobile first) que permite encontrar a tu mentor ideal. Permite la creación de usuarios y la posibilidad de elegir entre ser mentor o mentee, matchear entre los usuarios verificados disponibles, y con los match positivos tener un chat para comunicarse con ellos."
     }
   },
   "footer": {

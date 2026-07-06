@@ -1,22 +1,4 @@
-#app {
-  height: 100%;
-}
-html,
-body {
-  position: relative;
-  height: 100%;
-  scroll-padding-top: 85px;
-}
-
-body {
-  background: #eee;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #000;
-  margin: 0;
-  padding: 0;
-}
-
+/* Estilos del Swiper (galería de proyectos) */
 .swiper {
   width: 100%;
   height: 100%;
@@ -25,9 +7,9 @@ body {
 .swiper-slide {
   background-position: center;
   background-size: cover;
-  display: "flex";
-  justify-content: "center";
-  align-items: "center";
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .swiper-slide img {
@@ -36,13 +18,12 @@ body {
   height: 100%;
   object-fit: contain;
 }
-.swiper-button-prev {
-  color: #8a2be2;
-}
+
+.swiper-button-prev,
 .swiper-button-next {
-  color: #8a2be2;
+  color: #00FFFF;
 }
 
 .swiper-pagination-bullet-active {
-  background: #8a2be2;
+  background: #00FFFF;
 }

@@ -14,14 +14,12 @@ import { Projects } from "./components/Projects";
 function App() {
   return (
     <>
-      <Container
-        sx={{
-          bgcolor: "#13151a",
-        }}
-        component="main"
-        maxWidth={false}
-        disableGutters
-      >
+<Container
+          component="main"
+          maxWidth={false}
+          disableGutters
+          sx={{ bgcolor: 'background.default', minHeight: '100vh' }}
+        >
         <Navbar />
         <HomeTitle />
         <AboutMe />

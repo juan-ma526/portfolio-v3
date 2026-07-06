@@ -1,163 +1,141 @@
-import { Avatar, Box, Button, keyframes, Typography } from '@mui/material';
+import { Avatar, Box, Button, Typography, Stack } from '@mui/material';
 import cat from '../assets/catFooter.png';
 import { useTranslation } from 'react-i18next';
-
-const gradientAnimation = keyframes`
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-`;
 
 export const Footer = () => {
   const { t } = useTranslation();
   return (
     <Box
       id="footer"
+      component="footer"
       sx={{
-        height: { xs: 'auto', md: '300px' },
-        background: 'linear-gradient(135deg, #e8e8e8,#333333,#FAFAFA,#333333)',
-        backgroundSize: '400% 400%',
-        animation: `${gradientAnimation} 10s ease infinite`,
-
-        mt: '75px',
-        position: 'relative',
+        bgcolor: 'background.paper',
+        borderTop: '1px solid rgba(255, 29, 141, 0.25)',
+        mt: 8,
+        py: 6,
       }}
     >
       <Box
         sx={{
           display: 'flex',
           flexDirection: { xs: 'column', md: 'row' },
-          justifyContent: 'space-between',
+          justifyContent: 'space-around',
           alignItems: 'center',
-          height: '100%',
-          mx: { xs: '0px', md: '32px' },
-          gap: { xs: 4, md: 0 },
+          gap: { xs: 4, md: 2 },
+          px: { xs: 3, md: 6 },
+          maxWidth: 1200,
+          mx: 'auto',
         }}
       >
-        <Box
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            gap: { xs: 0, md: 1 },
-          }}
-        >
+        {/* Identidad */}
+        <Stack direction="row" spacing={2} alignItems="center" justifyContent="center">
           <Avatar
             src={cat}
             variant="square"
             sx={{
-              height: '200px',
-              width: '200px',
-              mt: '22px',
+              height: { xs: 120, md: 160 },
+              width: { xs: 120, md: 160 },
               objectFit: 'contain',
-              '& .MuiAvatar-img': {
-                objectFit: 'contain',
-              },
+              '& .MuiAvatar-img': { objectFit: 'contain' },
             }}
           />
-          <Box
-            sx={{
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',              
-            }}
-          >
+          <Box sx={{ display: 'flex', flexDirection: 'column' }}>
             <Typography
               variant="h5"
               sx={{
-                fontSize: '28px',
-                fontWeight: 600,
-                background: 'linear-gradient(to right,#FF007F, #8A2BE2)',
+                background: 'linear-gradient(to right, #00FFFF, #FF1D8D)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
               }}
             >
-              Martin Perez
+              Martín Pérez
             </Typography>
-            <Typography variant="subtitle1" color="black">
-              Frontend & Mobile Developer
+            <Typography variant="subtitle1" sx={{ color: 'text.secondary' }}>
+              {t('home.subtitle')}
             </Typography>
           </Box>
-        </Box>
-        <Box  sx={{
-            display: 'flex',
-            flexDirection: 'column',            
-            justifyContent: 'center',
-            alignItems: 'center',            
-            mb: { xs: '80px', md: '0px' },
-          }}>
+        </Stack>
 
-        <Button
-          href="mailto:jmperez675@gmail.com"
-          component="a"
-          variant="contained"
-          sx={{
-            background: 'linear-gradient(to right,#FA007F, #8A2BE2)',
-            mb: 2
-          }}
-        >
-          {t('footer.contact')}
-        </Button>
-        <Typography
-          sx={{
-            textShadow: '2px 2px 4px rgba(0,0,0,.5)',
-            color: 'black', 
-            display: { xs: 'none', md: 'block' },           
-          }}
-        >
-          {t('footer.created')} @Martin Perez 2024.
-        </Typography>
-        </Box>
-
-        <Box
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            gap: 1,
-            mb: { xs: '80px', md: '0px' },
-          }}
-        >
+        {/* Contacto */}
+        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 1 }}>
           <Button
-            href="https://www.linkedin.com/in/juan-ma526/"
-            target="_blank"
+            href="mailto:jmperez675@gmail.com"
             component="a"
             variant="contained"
             sx={{
-              background: 'linear-gradient(to right,#FA007F, #8A2BE2)',
+              background: 'linear-gradient(to right, #FF1D8D, #8A2BE2)',
+              textTransform: 'none',
+              fontWeight: 600,
+              px: 3,
             }}
           >
-            Linkedin
+            {t('footer.contact')}
+          </Button>
+          <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+            {t('footer.created')} Martín Pérez 2024.
+          </Typography>
+        </Box>
+
+        {/* Redes */}
+        <Stack direction="row" spacing={1}>
+          <Button
+            href="https://www.linkedin.com/in/juan-ma526/"
+            target="_blank"
+            rel="noopener noreferrer"
+            component="a"
+            variant="outlined"
+            aria-label="LinkedIn"
+            sx={{
+              color: 'neon.cyan',
+              borderColor: 'rgba(0, 255, 255, 0.3)',
+              textTransform: 'none',
+              '&:hover': {
+                borderColor: 'neon.cyan',
+                bgcolor: 'rgba(0, 255, 255, 0.05)',
+              },
+            }}
+          >
+            LinkedIn
           </Button>
           <Button
             href="https://www.youtube.com/@jmperez526"
             target="_blank"
+            rel="noopener noreferrer"
             component="a"
-            variant="contained"
+            variant="outlined"
+            aria-label="YouTube"
             sx={{
-              background: 'linear-gradient(to right,#FA007F, #8A2BE2)',
+              color: 'neon.cyan',
+              borderColor: 'rgba(0, 255, 255, 0.3)',
+              textTransform: 'none',
+              '&:hover': {
+                borderColor: 'neon.cyan',
+                bgcolor: 'rgba(0, 255, 255, 0.05)',
+              },
             }}
           >
-            Youtube
+            YouTube
           </Button>
           <Button
             href="https://github.com/juan-ma526"
             target="_blank"
+            rel="noopener noreferrer"
             component="a"
-            variant="contained"
+            variant="outlined"
+            aria-label="GitHub"
             sx={{
-              background: 'linear-gradient(to right,#FA007F, #8A2BE2)',
+              color: 'neon.cyan',
+              borderColor: 'rgba(0, 255, 255, 0.3)',
+              textTransform: 'none',
+              '&:hover': {
+                borderColor: 'neon.cyan',
+                bgcolor: 'rgba(0, 255, 255, 0.05)',
+              },
             }}
           >
-            Github
+            GitHub
           </Button>
-        </Box>
+        </Stack>
       </Box>
     </Box>
   );

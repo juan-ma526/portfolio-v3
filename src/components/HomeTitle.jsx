@@ -3,6 +3,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import desktop from "../assets/desktop.jpg";
 import { useTranslation } from "react-i18next";
+import { Reveal } from "./Reveal";
 
 
 export const HomeTitle = () => {
@@ -12,9 +13,18 @@ export const HomeTitle = () => {
       sx={{
         display: 'flex',
         flexDirection: { xs: 'column', md: 'row' },
-        minHeight: '100vh',
-        bgcolor: '#121212',
-        color: 'white',
+        minHeight: { xs: 'auto', md: '100vh' },
+        bgcolor: 'background.default',
+        color: 'text.primary',
+        position: 'relative',
+        // En móvil/tablet: backdrop con la imagen + overlay oscuro para contraste
+        backgroundImage: {
+          xs: `linear-gradient(rgba(18,18,18,0.88), rgba(18,18,18,0.92)), url(${desktop})`,
+          md: 'none',
+        },
+        backgroundSize: { xs: 'cover', md: 'auto' },
+        backgroundPosition: { xs: 'center', md: 'unset' },
+        backgroundAttachment: { xs: 'fixed', md: 'unset' },
       }}
     >
       {/* MITAD IZQUIERDA: TEXTO */}
@@ -27,56 +37,55 @@ export const HomeTitle = () => {
           alignItems: { xs: 'center', md: 'flex-start' },
           px: 4,
           paddingTop: 14,
-          paddingBottom: {xs: 0, md: 14},          
+          paddingBottom: {xs: 0, md: 14},
           pl: { md: 12 },
         }}
       >
-        <Typography
-          variant="h1"
-          sx={{
-            fontWeight: 'bold',
-            letterSpacing: '-0.02em',
-            mb: 2,
-            fontSize: { xs: '3rem', md: '4.5rem' },
-            textAlign: { xs: 'center', md: 'left' },
-          }}
-        >
-          {t('home.greeting')}
-        </Typography>
-        <Typography
-          variant="h2"
-          sx={{
-            fontWeight: 600,
-            color: '#FF1D8D',
-            mb: 4,
-            fontSize: { xs: '1.875rem', md: '2.25rem' },
-            textAlign: { xs: 'center', md: 'left' },
-          }}
-        >
-         Frontend & Mobile Developer
-        </Typography>
-        <Typography
-          variant="body1"
-          sx={{
-            color: '#A3A3A3',
-            mb: 6,
-            fontSize: '1.125rem',
-            textAlign: { xs: 'center', md: 'left' },
-          }}
-        >
-          {t('home.description')}
-        </Typography>
+        <Reveal>
+          <Typography
+            variant="h1"
+            sx={{ mb: 2, textAlign: { xs: 'center', md: 'left' }, maxWidth: { md: 620 } }}
+          >
+            {t('home.greeting')}
+          </Typography>
+        </Reveal>
+        <Reveal delay={120}>
+          <Typography
+            variant="h2"
+            sx={{
+              color: 'neon.magenta',
+              mb: 4,
+              textAlign: { xs: 'center', md: 'left' },
+            }}
+          >
+            {t('home.subtitle')}
+          </Typography>
+        </Reveal>
+        <Reveal delay={240}>
+          <Typography
+            variant="body1"
+            sx={{
+              mb: 6,
+              textAlign: { xs: 'center', md: 'left' },
+              maxWidth: { md: 560 },
+            }}
+          >
+            {t('home.description')}
+          </Typography>
+        </Reveal>
+        <Reveal delay={360}>
         <Stack direction="row" spacing={3}>
           <IconButton
             component="a"
             href="https://github.com/juan-ma526"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="GitHub"
             sx={{
-              color:{ xs: '#ffffff', md: '#A3A3A3' },
+              color: { xs: 'text.primary', md: 'text.secondary' },
               fontSize: '2.5rem',
               transition: 'color 0.2s',
-              '&:hover': { color: 'white' },
+              '&:hover': { color: 'neon.cyan' },
             }}
           >
             <GitHubIcon fontSize="inherit" />
@@ -86,16 +95,18 @@ export const HomeTitle = () => {
             href="https://www.linkedin.com/in/juan-ma526"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="LinkedIn"
             sx={{
-              color:{ xs: '#ffffff', md: '#A3A3A3' },
+              color: { xs: 'text.primary', md: 'text.secondary' },
               fontSize: '2.5rem',
               transition: 'color 0.2s',
-              '&:hover': { color: 'white' },
+              '&:hover': { color: 'neon.cyan' },
             }}
           >
             <LinkedInIcon fontSize="inherit" />
           </IconButton>
         </Stack>
+        </Reveal>
       </Box>
 
       {/* MITAD DERECHA: IMAGEN */}
@@ -110,7 +121,7 @@ export const HomeTitle = () => {
         <Box
           component="img"
           src={desktop}
-          alt="Martin Perez Setup Cyberpunk"
+          alt="Martín Pérez - Setup de desarrollo cyberpunk"
           sx={{
             width: '100%',
             height: '100%',

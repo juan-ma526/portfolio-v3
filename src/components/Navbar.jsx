@@ -47,13 +47,20 @@ function Navbar(props) {
     setMobileOpen((prevState) => !prevState);
   };
 
-  // El Drawer (Menú lateral móvil) con los colores adaptados
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center", height: '100%', bgcolor: '#121212', color: 'white' }}>
+    <Box
+      onClick={handleDrawerToggle}
+      sx={{
+        textAlign: "center",
+        height: '100%',
+        bgcolor: 'background.default',
+        color: 'text.primary',
+      }}
+    >
       <Typography variant="h6" sx={{ my: 3, fontWeight: 'bold', letterSpacing: '2px' }}>
-        <span style={{ color: '#00FFFF' }}>&lt;</span> MP <span style={{ color: '#FF1D8D' }}>/&gt;</span>
+        <Box component="span" sx={{ color: 'neon.cyan' }}>&lt;</Box> MP <Box component="span" sx={{ color: 'neon.magenta' }}>/&gt;</Box>
       </Typography>
-      <Divider sx={{ borderColor: 'rgba(255, 255, 255, 0.1)' }} />
+      <Divider />
       <List>
         {navItems.map((item, index) => (
           <ListItem key={index} disablePadding>
@@ -78,24 +85,27 @@ function Navbar(props) {
             </ListItemButton>
           </ListItem>
         ))}
-    <Button
-              onClick={toggleLanguage}
-              color="inherit"
-             sx={{
-            px: 4,
-            py: 1,
-            color: '#00FFFF',
-            border: '1px solid rgba(0, 255, 255, 0.3)',
-            borderRadius: '20px',
-            fontWeight: 'bold',
-            '&:hover': {
-              bgcolor: 'rgba(0, 255, 255, 0.1)',
-            }
-          }}
-              variant="outlined"
-            >
-              {i18n.language.startsWith('es') ? 'EN' : 'ES'}
-            </Button>
+        <ListItem sx={{ justifyContent: 'center', py: 2 }}>
+          <Button
+            onClick={toggleLanguage}
+            aria-label={i18n.language.startsWith('es') ? 'Switch to English' : 'Cambiar a Español'}
+            sx={{
+              px: 4,
+              py: 1,
+              color: 'neon.cyan',
+              border: '1px solid rgba(0, 255, 255, 0.3)',
+              borderRadius: '20px',
+              fontWeight: 'bold',
+              '&:hover': {
+                bgcolor: 'rgba(0, 255, 255, 0.1)',
+                borderColor: 'neon.cyan',
+              }
+            }}
+            variant="outlined"
+          >
+            {i18n.language.startsWith('es') ? 'EN' : 'ES'}
+          </Button>
+        </ListItem>
       </List>
    
     </Box>
@@ -108,19 +118,18 @@ function Navbar(props) {
       <CssBaseline />
       <AppBar
         component="nav"
-        position="fixed" // Fijo arriba
+        position="fixed"
         sx={{
-          // ESTILOS NUEVOS: Glassmorphism y Full-Width
           width: '100%',
-          bgcolor: 'rgba(18, 18, 18, 0.8)', // Fondo casi negro semitransparente
-          backdropFilter: 'blur(12px)', // Efecto esmerilado
+          bgcolor: 'rgba(18, 18, 18, 0.8)',
+          backdropFilter: 'blur(12px)',
           boxShadow: '0 4px 30px rgba(0, 0, 0, 0.5)',
-          borderBottom: '1px solid rgba(0, 255, 255, 0.15)', // Borde cian sutil
+          borderBottom: '1px solid rgba(0, 255, 255, 0.15)',
         }}
       >
         <Toolbar
           sx={{
-            justifyContent: { xs: 'space-between', md: 'center' },
+            justifyContent: { xs: 'space-between', lg: 'center' },
             minHeight: '70px',
           }}
         >
@@ -130,13 +139,37 @@ function Navbar(props) {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { md: 'none' }, color: '#00FFFF' }}
+            sx={{ mr: 2, display: { lg: 'none' }, color: 'neon.cyan' }}
           >
             <MenuIcon />
           </IconButton>
 
+          {/* MONOGRAMA visible en móvil/tablet */}
+          <Typography
+            variant="h6"
+            sx={{
+              display: { xs: 'block', lg: 'none' },
+              fontWeight: 'bold',
+              letterSpacing: '2px',
+              color: 'text.primary',
+            }}
+          >
+            <Box component="span" sx={{ color: 'neon.cyan' }}>&lt;</Box>
+            {' MP '}
+            <Box component="span" sx={{ color: 'neon.magenta' }}>/&gt;</Box>
+          </Typography>
+
           {/* MENÚ DESKTOP (Acentos Neón) */}
-          <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 1 }}>
+          <Box
+            sx={{
+              display: { xs: 'none', lg: 'flex' },
+              gap: 1,
+              alignItems: 'center',
+              maxWidth: 1100,
+              width: '100%',
+              justifyContent: 'center',
+            }}
+          >
             {navItems.map((item) => (
               <Button
                 component="a"
@@ -144,24 +177,22 @@ function Navbar(props) {
                 startIcon={item.icon}
                 key={item.title}
                 sx={{
-                  color: '#e0e0e0',
+                  color: 'text.primary',
                   textTransform: 'none',
-                  fontSize: '1rem',
                   px: 2,
                   py: 1,
                   transition: 'all 0.3s ease',
                   '& .MuiButton-startIcon': {
-                    color: 'inherit', // El icono hereda el color del texto
+                    color: 'inherit',
                     transition: 'color 0.3s ease',
                   },
-                  // EFECTO NEÓN AL HACER HOVER
                   '&:hover': {
-                    color: '#00FFFF', // Texto a cian
+                    color: 'neon.cyan',
                     textShadow: '0 0 8px rgba(0, 255, 255, 0.6)',
                     bgcolor: 'transparent',
-                    transform: 'translateY(-2px)', // Saltito
+                    transform: 'translateY(-2px)',
                     '& .MuiButton-startIcon': {
-                      color: '#FF1D8D', // Icono a magenta en hover (contraste genial)
+                      color: 'neon.magenta',
                       filter: 'drop-shadow(0 0 5px rgba(255, 29, 141, 0.6))',
                     },
                   },
@@ -172,22 +203,21 @@ function Navbar(props) {
             ))}
             <Button
               onClick={toggleLanguage}
-              color="inherit"
-             sx={{
-                ml: 2, // Lo separa un poco del enlace "Contacto"
-                alignSelf: 'center', // Asegura que esté alineado verticalmente con los demás
+              aria-label={i18n.language.startsWith('es') ? 'Switch to English' : 'Cambiar a Español'}
+              sx={{
+                ml: 2,
                 minWidth: 'auto',
                 px: 2,
                 py: 0.5,
-                color: '#e0e0e0',
+                color: 'text.primary',
                 border: '1px solid rgba(0, 255, 255, 0.3)',
                 borderRadius: '20px',
                 textTransform: 'none',
                 fontWeight: 'bold',
                 transition: 'all 0.3s ease',
                 '&:hover': {
-                  color: '#00FFFF',
-                  borderColor: '#00FFFF',
+                  color: 'neon.cyan',
+                  borderColor: 'neon.cyan',
                   boxShadow: '0 0 10px rgba(0, 255, 255, 0.5)',
                   bgcolor: 'rgba(0, 255, 255, 0.05)',
                   transform: 'translateY(-2px)',
@@ -212,11 +242,12 @@ function Navbar(props) {
             keepMounted: true,
           }}
           sx={{
-            display: { xs: 'block', md: 'none' },
+            display: { xs: 'block', lg: 'none' },
             '& .MuiDrawer-paper': {
               boxSizing: 'border-box',
               width: drawerWidth,
-              borderRight: '1px solid rgba(255, 29, 141, 0.2)', // Borde magenta en el menú
+              borderRight: '1px solid rgba(255, 29, 141, 0.2)',
+              bgcolor: 'background.default',
             },
           }}
         >

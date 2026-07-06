@@ -1,144 +1,127 @@
-import { Avatar, Button, Grid, Typography } from '@mui/material';
+import { Avatar, Box, Button, Grid, Typography } from '@mui/material';
 import PhotoProfile from '../assets/photoProfile2.png';
-import { keyframes } from '@emotion/react';
 import { Trans, useTranslation } from 'react-i18next';
-
-const gradientAnimation = keyframes`
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-`;
+import { Reveal } from './Reveal';
 
 const highlightStyle = {
-  color: '#60CFFF',
+  color: '#00FFFF',
   fontWeight: 700,
 };
 
 export const AboutMe = () => {
-   const { t } = useTranslation();
+  const { t } = useTranslation();
   return (
-    <Grid
+    <Box
       id="about-me"
-      minHeight={589}
-      alignItems="center"
-      container
-      spacing={3}
       sx={{
-        borderRadius: '22px',
-        background:
-          'linear-gradient(135deg, #1a6b7a, #7a2060, #3a1a6e, #1a1a2e)',
-        backgroundSize: '400% 400%',
-        animation: `${gradientAnimation} 15s ease infinite`,
-        padding: '20px',
-        margin: '22px 22px 100px 22px',
+        maxWidth: 1200,
+        mx: 'auto',
+        my: { xs: 3, md: 6 },
+        px: { xs: 2, md: 4 },
       }}
     >
       <Grid
-        display="flex"
-        flexDirection="column"
-        justifyContent="start"
-        alignContent="center"
-        maxWidth={1000}
-        minHeight={500}
-        xs={12}
-        md={6}
-        sx={{ margin: 'auto', padding: '20px' }}
-      >
-        <Typography
-          variant="h2"
-          sx={{
-            fontSize: { xs: '30px', sm: '42px' },
-            color: 'white',
-            fontWeight: 700,
-            marginBottom: '20px',
-          }}
-        >
-          {t('about.title')}
-        </Typography>
-        <Typography
-          variant="body1"
-          sx={{
-            color: 'black',
-            fontSize: { xs: '18px', sm: '24px' },
-            marginBottom: '20px',
-          }}
-        >
-         <Trans
-            i18nKey="about.paragraph1"
-            components={{ highlight: <span style={highlightStyle} /> }}
-          />
-        </Typography>
-
-        <Typography
-          variant="body1"
-          sx={{
-            color: 'black',
-            fontSize: { xs: '18px', sm: '24px' },
-            marginBottom: '20px',
-          }}
-        >
-          <Trans
-            i18nKey="about.paragraph2"
-            components={{ highlight: <span style={highlightStyle} /> }}
-          /> 
-        </Typography>
-        <Typography
-          variant="body1"
-          sx={{
-            color: 'black',
-            fontSize: { xs: '18px', sm: '24px' },
-            marginBottom: '20px',
-          }}
-        >
-        <Trans
-            i18nKey="about.paragraph3"
-            components={{ highlight: <span style={highlightStyle} /> }}
-          /> 
-        </Typography>
-      </Grid>
-      <Grid
-        minHeight={350}
-        display="flex"
-        flexDirection="column"
+        container
+        spacing={4}
         alignItems="center"
-        justifyContent="center"
-        xs={12}
-        md={6}
-        sx={{ margin: 'auto' }}
+        sx={{
+          borderRadius: '22px',
+          // Gradiente oscuro coherente con la paleta cyberpunk
+          background:
+            'linear-gradient(135deg, rgba(26,26,46,0.9), rgba(42,10,58,0.85), rgba(10,42,58,0.85))',
+          border: '1px solid rgba(0, 255, 255, 0.15)',
+          boxShadow: '0 0 30px rgba(0, 255, 255, 0.05)',
+          p: { xs: 3, md: 6 },
+          minHeight: { xs: 'auto', md: 500 },
+        }}
       >
-        <Avatar
-          alt="Foto de perfil"
-          src={PhotoProfile}
+        <Grid
+          item
+          xs={12}
+          md={6}
+          sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}
+        >
+          <Reveal>
+            <Typography variant="h2" sx={{ color: 'text.primary', mb: 2 }}>
+              {t('about.title')}
+            </Typography>
+          </Reveal>
+          <Reveal delay={100}>
+            <Typography variant="body1" sx={{ color: 'text.secondary' }}>
+              <Trans
+                i18nKey="about.paragraph1"
+                components={{ highlight: <span style={highlightStyle} /> }}
+              />
+            </Typography>
+          </Reveal>
+          <Reveal delay={200}>
+            <Typography variant="body1" sx={{ color: 'text.secondary' }}>
+              <Trans
+                i18nKey="about.paragraph2"
+                components={{ highlight: <span style={highlightStyle} /> }}
+              />
+            </Typography>
+          </Reveal>
+          <Reveal delay={300}>
+            <Typography variant="body1" sx={{ color: 'text.secondary' }}>
+              <Trans
+                i18nKey="about.paragraph3"
+                components={{ highlight: <span style={highlightStyle} /> }}
+              />
+            </Typography>
+          </Reveal>
+        </Grid>
+
+        <Grid
+          item
+          xs={12}
+          md={6}
           sx={{
-            width: { xs: 300, sm: 350, md: 400 },
-            height: { xs: 300, sm: 350, md: 400 },
-            border: '4px solid white',
-          }}
-        />
-        <Button
-          component="a"
-          href="/Martin-Perez-CV.pdf"
-          download="Martin-Perez-CV.pdf"
-          size="large"
-          sx={{
-            backgroundColor: 'white',
-            color: 'black',
-            borderRadius: '10px',
-            '&:hover': {
-              backgroundColor: 'black',
-              color: 'white',
-            },
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: 3,
           }}
         >
-          {t('about.downloadCV')}
-        </Button>
+          <Reveal delay={150}>
+            <Avatar
+              alt="Foto de perfil"
+              src={PhotoProfile}
+              sx={{
+                width: { xs: 260, sm: 320, md: 360 },
+                height: { xs: 260, sm: 320, md: 360 },
+                border: '4px solid',
+                borderColor: 'neon.cyan',
+                boxShadow: '0 0 25px rgba(0, 255, 255, 0.3)',
+              }}
+            />
+          </Reveal>
+          <Reveal delay={250}>
+            <Button
+              component="a"
+              href="/Martin-Perez-CV.pdf"
+              download="Martin-Perez-CV.pdf"
+              size="large"
+              sx={{
+                bgcolor: 'transparent',
+                color: 'neon.cyan',
+                border: '1px solid rgba(0, 255, 255, 0.4)',
+                borderRadius: '10px',
+                fontWeight: 600,
+                transition: 'all 0.3s ease',
+                '&:hover': {
+                  bgcolor: 'rgba(0, 255, 255, 0.08)',
+                  borderColor: 'neon.cyan',
+                  boxShadow: '0 0 15px rgba(0, 255, 255, 0.4)',
+                },
+              }}
+            >
+              {t('about.downloadCV')}
+            </Button>
+          </Reveal>
+        </Grid>
       </Grid>
-    </Grid>
+    </Box>
   );
 };

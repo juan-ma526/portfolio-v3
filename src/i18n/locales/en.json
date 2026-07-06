@@ -9,15 +9,16 @@
   },
   "home": {
     "greeting": "Hi, I'm Martín Pérez",
-    "description": "Specialized in creating seamless digital experiences for web and mobile. Strong command of the ecosystem (React/Nextjs/React Native Expo), with solid ability to integrate and develop backend solutions (Node.js/NestJS)."
+    "subtitle": "Frontend & Mobile Developer",
+    "description": "Specialized in creating seamless digital experiences for web and mobile. Strong command of the ecosystem (React/Next.js/React Native Expo), with solid ability to integrate and develop backend solutions (Node.js/NestJS)."
   },
-"about": {
-  "title": "ABOUT ME",
-  "paragraph1": "I'm a <highlight>Frontend & Mobile Developer</highlight> passionate about coding and tackling <highlight>challenges</highlight> in order to <highlight>improve</highlight> continuously. I consider myself a highly <highlight>adaptable</highlight> person. I started my journey mastering key <highlight>frontend</highlight> technologies and quickly added new tools to my stack to meet the goals of every project I've been part of. I also had the opportunity to <highlight>contribute</highlight> to backend development whenever the project's challenges required it.",
-  "paragraph2": "On a daily basis, I stand out for my strong <highlight>communication</highlight> skills — I'm a transparent person and a great <highlight>team player</highlight>. I focus on meeting established goals, <highlight>adapting</highlight> to the project's pace and <highlight>managing</highlight> challenges in an agile way. I enjoy <highlight>proposing solutions</highlight>, <highlight>receiving</highlight> feedback to optimize code, and always looking for ways to improve every application I work on.",
-  "paragraph3": "Outside of code, I'm really passionate about sports and training, and I approach those activities with <highlight>consistency</highlight> and <highlight>commitment</highlight> 🚀.",
-  "downloadCV": "Download CV"
-},
+  "about": {
+    "title": "ABOUT ME",
+    "paragraph1": "I'm a <highlight>Frontend & Mobile Developer</highlight> passionate about coding and tackling <highlight>challenges</highlight> in order to <highlight>improve</highlight> continuously. I consider myself a highly <highlight>adaptable</highlight> person. I started my journey mastering key <highlight>frontend</highlight> technologies and quickly added new tools to my stack to meet the goals of every project I've been part of. I also had the opportunity to <highlight>contribute</highlight> to backend development whenever the project's challenges required it.",
+    "paragraph2": "On a daily basis, I stand out for my strong <highlight>communication</highlight> skills — I'm a transparent person and a great <highlight>team player</highlight>. I focus on meeting established goals, <highlight>adapting</highlight> to the project's pace and <highlight>managing</highlight> challenges in an agile way. I enjoy <highlight>proposing solutions</highlight>, <highlight>receiving</highlight> feedback to optimize code, and always looking for ways to improve every application I work on.",
+    "paragraph3": "Outside of code, I'm really passionate about sports and training, and I approach those activities with <highlight>consistency</highlight> and <highlight>commitment</highlight> 🚀.",
+    "downloadCV": "Download CV"
+  },
   "StepperJobs": {
     "title": "Experience",
     "job1": {
@@ -30,25 +31,25 @@
       "title": "Frontend Developer",
       "company": "Semillero Latam",
       "duration": "06/2024 - 09/2024",
-      "description": "Work simulation. MVP developed by 5 developers. The objective of the practice is to create a website for information and dissemination of triple impact providers and related publications."
+      "description": "Job simulation carried out by a team of 5 developers. The objective of the practice was to create a website for information and dissemination of triple impact providers and related publications."
     },
     "job3": {
       "title": "Frontend Developer",
       "company": "DevTalles",
       "duration": "03/2024 - 04/2024",
-      "description": "Programming contest given by the DevTalles community. The objective of the application is to create a raffle website to create, delete, and update them using the Discord API. Request to be on the Discord server to participate and be able to choose a winner randomly."
+      "description": "Programming contest organized by the DevTalles community. The goal of the application was to create a raffle website to create, delete, and update raffles using the Discord API. Users had to be on the Discord server to participate and be able to pick a winner at random."
     },
     "job4": {
       "title": "FullStack Developer",
       "company": "Freelance",
       "duration": "01/2024 - 02/2024",
-      "description": "Freelance project to create a website for conducting raffles, with management of these raffles from an admin panel."
+      "description": "Freelance project to build a website for conducting raffles, with management of the raffles from an admin panel."
     },
     "job5": {
       "title": "FullStack Developer",
       "company": "Cruce",
       "duration": "10/2022 - 12/2022",
-      "description": "Professional internship developed for the company CRUCE. Project where an appointment application was developed to create an administrator, operator, and a client capable of booking, creating branches, modifying, and operating each branch and appointments, in a group of 4 people, using the agile Scrum methodology."
+      "description": "Professional internship developed for the company CRUCE. A project where an appointment application was built to create an administrator, an operator, and a client capable of booking, creating branches, modifying, and operating each branch and its appointments. Built in a group of 4 people, using the agile Scrum methodology."
     }
   },
   "skills": {
@@ -57,6 +58,22 @@
   "projects": {
     "title": "Projects",
     "click": "Click to view details",
+    "close": "Close",
+    "stack": "Tech stack",
+    "categories": {
+      "mobile": "Mobile",
+      "web": "Web",
+      "fullstack": "Fullstack",
+      "ecommerce": "E-commerce"
+    },
+    "linkTypes": {
+      "github": "Code",
+      "video": "Video",
+      "demo": "Demo",
+      "app": "App",
+      "website": "Website",
+      "playstore": "Google Play"
+    },
     "project1": {
       "title": "App Diabecop",
       "description": "Diabecop is an innovative application designed for effective diabetes management. With 3 key features and integrated AI support, it provides the help you need to manage your diet optimally."
@@ -67,27 +84,27 @@
     },
     "project3": {
       "title": "TMDB Movie",
-      "description": "Movie App, to view movies or series by release date or genre, and to view information about each movie or series and watch the trailer for each one. You can also create a user account to save your favorite movies and create a list of your favorite movies or series."
+      "description": "Movie application to view movies or series currently in theaters or by genre, and to view information about each one along with its trailer. You can also create a user account to save your favorite movies and build a list of your favorite movies or series."
     },
     "project4": {
       "title": "COMO EN CASA",
-      "description": "Ecommerce application to view and order food dishes, with the possibility of having administrators to manage products and stock of each dish, and to manipulate orders. It also has a shopping cart where a history of orders is kept."
+      "description": "Ecommerce application to view and sort food dishes, with the possibility of having administrators to manage products and the stock of each dish, and to manipulate orders. It also includes a shopping cart that keeps a history of the orders placed."
     },
     "project5": {
       "title": "Ecosistema App",
-      "description": "Project for a fifth impact app for the creation of service providers and news publications related to environmental impact. Implementation of Google OAuth, an administration panel for the approval or rejection of providers, to view the number of views of publications."
+      "description": "Triple impact app project for the creation of service providers and news publications related to environmental impact. Implemented Google OAuth, an admin panel to approve or reject providers, and to view the number of views of the publications."
     },
     "project6": {
       "title": "Devtalles Giveaway",
-      "description": "Web app for the contest held on the https://cursos.devtalles.com/ page. This app was developed in a week with the ability to create, modify, and delete raffles. Discord API is required, and you must be on the DevTalles server to participate. In the admin panel, you can randomly choose the winner and view the participants in each raffle."
+      "description": "Web app for the contest held on the https://cursos.devtalles.com/ page. This app was developed in one week with the ability to create, modify, and delete raffles. It requires the Discord API and being on the DevTalles server to participate. From the admin panel, you can randomly pick the winner and view the participants in each raffle."
     },
     "project7": {
       "title": "Raffle Draw",
-      "description": "Mini Freelance Project. This is a web application for purchasing raffles to draw specific products. With the possibility of buying n number of tickets, giving you the number of tickets purchased. The admin can create the ticket stock, delete said stock, select a winner, search for a specific ticket, and view the tickets that were purchased."
+      "description": "Small freelance project. A web application to purchase raffle tickets to draw specific products. You can buy n number of tickets, displaying the number of tickets purchased. The admin can create the ticket stock, delete that stock, pick a winner, search for a specific ticket, and view the tickets that were purchased."
     },
     "project8": {
       "title": "Perfect Mentor",
-      "description": "Web application (mobile first) that allows you to find your ideal mentor. It allows users to be created and the possibility of choosing between being a mentor or a mentee, being able to match between available verified users, and with positive matches, having a chat to communicate with them."
+      "description": "Web application (mobile first) that allows you to find your ideal mentor. It allows creating users and choosing between being a mentor or a mentee, matching among available verified users, and with positive matches, having a chat to communicate with them."
     }
   },
   "footer": {
