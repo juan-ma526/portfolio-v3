@@ -14,23 +14,24 @@ export const ProjectGallery = ({ images, title }) => {
     <Box
       sx={{
         width: "100%",
-        height: { xs: 240, sm: 320, md: 420 },
+        height: { xs: 400, sm: 320, md: 420 },
         borderRadius: 2,
         overflow: "hidden",
         border: "1px solid rgba(255,255,255,0.1)",
         bgcolor: "#0a0a0a",
         "& .swiper": { height: "100%" },
         "& .swiper-slide": {
+          height: "100%",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           background: "#0a0a0a",
         },
         "& .swiper-slide img": {
-          width: "auto",
           maxWidth: "100%",
           maxHeight: "100%",
-          height: "100%",
+          height: "auto",
+          width: "auto",
           objectFit: "contain",
         },
       }}
