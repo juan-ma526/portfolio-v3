@@ -60,7 +60,7 @@ export default function StepperJobs() {
       <Container maxWidth="lg">
         <Reveal>
           <Typography id="trabajos" variant="h2" sx={{ color: 'text.primary' }}>
-            {t('experience.title')}
+            {t('StepperJobs.title')}
           </Typography>
           <Box
             sx={{

@@ -25,14 +25,14 @@ export const AboutMe = () => {
         spacing={4}
         alignItems="center"
         sx={{
-          borderRadius: '22px',
-          // Gradiente oscuro coherente con la paleta cyberpunk
+          borderRadius: '22px',          
           background:
             'linear-gradient(135deg, rgba(26,26,46,0.9), rgba(42,10,58,0.85), rgba(10,42,58,0.85))',
           border: '1px solid rgba(0, 255, 255, 0.15)',
           boxShadow: '0 0 30px rgba(0, 255, 255, 0.05)',
           p: { xs: 3, md: 6 },
           minHeight: { xs: 'auto', md: 500 },
+          justifyContent: 'center',
         }}
       >
         <Grid
@@ -80,7 +80,7 @@ export const AboutMe = () => {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            justifyContent: 'center',
+            justifyContent: 'center',            
             gap: 3,
           }}
         >
